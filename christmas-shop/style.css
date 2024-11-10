@@ -1,4 +1,16 @@
 
+/* Fonts */
+
+@font-face {
+	font-family: Allura;
+	src: url("./assets/fonts/Allura-Regular.ttf");
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
 /* General styles */
 
 body {
