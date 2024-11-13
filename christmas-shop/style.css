@@ -13,6 +13,10 @@
 
 /* General styles */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;
@@ -21,6 +25,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-content: center;
 	
 	background-color: #FFFFFF;
 }
@@ -100,3 +105,25 @@ p {
 
 .light { color: #FFFFFF; }
 
+/* Header */
+
+.logo-div {
+	padding: 8px 20px;
+	display: flex;
+	gap: 30px;
+}
+
+.logo {
+	width: 24px;
+	height: 24px;
+}
+
+.nav-list {
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+}
+
+.nav-item {
+
+}
