@@ -45,6 +45,11 @@ a:hover {
 	color: #FF4646;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+}
+
 .pic {
 	object-fit: contain;
 	border-radius: 20px;
@@ -108,7 +113,7 @@ p {
 /* Header */
 
 header {
-	width: 1440px;
+	width: 1275px;
 	padding: 8px;
 	display: flex;
 	justify-content: space-between;
@@ -139,6 +144,7 @@ nav {
 .nav-list {
 	display: flex;
 	justify-content: flex-end;
+	gap: 12px;
 	list-style: none;
 }
 
