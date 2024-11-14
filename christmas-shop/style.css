@@ -136,7 +136,7 @@ header {
 }
 
 .logo-div {
-	margin-left: 90px;
+	margin-left: 80px;
 	padding: 8px 20px;
 	display: flex;
 	align-items: center;
@@ -149,13 +149,13 @@ header {
 }
 
 nav {
-	padding: 0 75px;
+	padding: 0 82px;
 }
 
 .nav-list {
 	display: flex;
 	justify-content: flex-end;
-	gap: 12px;
+	gap: 8px;
 	list-style: none;
 }
 
@@ -182,7 +182,7 @@ main {
 	align-items: center;
 
 	background-image: url("./assets/png/bgs/bg-snow.png"), url("./assets/png/bgs/bg-ball.png");
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -198,7 +198,7 @@ main {
 }
 
 .btn-explore {
-	width: 235px;
+	width: 236px;
 	height: 56px;
 	padding: 20px 32px;
 
@@ -220,6 +220,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 12px;
 }
 
 .contacts {
