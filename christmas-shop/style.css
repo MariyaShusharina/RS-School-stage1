@@ -163,8 +163,42 @@ nav {
 	background-color: rgba(255, 70, 70, 0.1);
 }
 
+/* Main Styles*/
+
+main {
+	background-color: #FF4646;
+	border-radius: 20px;
 }
 
+.hero {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	background-image: url("./assets/png/bgs/bg-snow.png"), url("./assets/png/bgs/bg-ball.png");
+	background-size: stretch;
+	background-repeat: no-repeat;
+}
+
+.hero-div {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	gap: 12px;
+}
+
+.btn-explore {
+	width: 235px;
+	height: 56px;
+	padding: 20px 32px;
+	background-color: #181C29;
+	color: #FFFFFF;
+}
+
+.btn-explore:hover {
+	background-color: #FFFFFF;
+	color: #181C29;
+}
 
 /* Footer */
 
