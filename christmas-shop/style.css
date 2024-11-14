@@ -204,7 +204,7 @@ main {
 
 	border: none;
 	border-radius: 20px;
-	
+
 	background-color: #181C29;
 	color: #FFFFFF;
 }
@@ -247,7 +247,7 @@ footer {
 	transition: all 0.4s;
 }
 
-.icon-div {
+.icon-div:hover {
 	filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
 }
 
