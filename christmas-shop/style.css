@@ -67,28 +67,34 @@ h1, h2, h3, h4, .action-l, .action-s, .slider-text {
 	text-transform: uppercase;
 }
 
+p, h1 {
+	margin: 0;
+}
+
 h1 {
 	font-size: 32px;
 	line-height: 150%;
-	letter-spacing: 18%;
+	letter-spacing: 0.18em;
+
+	text-align: center;
 }
 
 h2, .action-l {
 	font-size: 24px;
 	line-height: 152%;
-	letter-spacing: 16%;
+	letter-spacing: 0.16em;
 }
 
 h3 {
 	font-size: 16px;
 	line-height: 152%;
-	letter-spacing: 8%;
+	letter-spacing: 0.08em;
 }
 
 h4, .action-s {
 	font-size: 12px;
 	line-height: 130%;
-	letter-spacing: 5%;
+	letter-spacing: 0.05em;
 }
 
 p {
@@ -103,7 +109,7 @@ p {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 100%;
-	letter-spacing: 5%;
+	letter-spacing: 0.05em;
 }
 
 .slider-text {
@@ -117,7 +123,7 @@ p {
 /* Header */
 
 header {
-	padding: 8px 0;
+	padding: 8px 0 5px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -173,17 +179,21 @@ main {
 .hero {
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 
 	background-image: url("./assets/png/bgs/bg-snow.png"), url("./assets/png/bgs/bg-ball.png");
-	background-size: stretch;
+	background-size: contain;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .hero-div {
+	padding: 120px;
+
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 	gap: 12px;
 }
 
@@ -191,6 +201,10 @@ main {
 	width: 235px;
 	height: 56px;
 	padding: 20px 32px;
+
+	border: none;
+	border-radius: 20px;
+	
 	background-color: #181C29;
 	color: #FFFFFF;
 }
@@ -208,6 +222,15 @@ footer {
 	align-items: center;
 }
 
+.contacts {
+	padding: 20px 10px;
+
+	display: flex;
+	justify-content: stretch;
+	align-items: stretch;
+	gap: 10px;
+}
+
 .div-socials {
 	display: flex;
 	gap: 12px;
@@ -219,7 +242,7 @@ footer {
 
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 
 	transition: all 0.4s;
 }
