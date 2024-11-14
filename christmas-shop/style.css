@@ -207,6 +207,8 @@ main {
 
 	background-color: #181C29;
 	color: #FFFFFF;
+
+	transition: all 0.4s;
 }
 
 .btn-explore:hover {
