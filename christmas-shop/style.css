@@ -109,7 +109,15 @@ p {
 
 header {
 	width: 1440px;
+	padding: 8px;
 	display: flex;
+	justify-content: space-between;
+}
+
+.logo-link {  }
+
+.logo-link:hover {
+	color: #181C29 !important;
 }
 
 .logo-div {
@@ -136,6 +144,7 @@ nav {
 
 .nav-item {
 	padding: 12px 20px;
+	border-radius: 12px;
 }
 
 
