@@ -249,18 +249,23 @@ main {
 /* Footer */
 
 footer {
+	padding: 60px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 12px;
+	gap: 40px;
 }
 
 .contacts {
+	width: 83vw;
+	max-width: 1275px; /* !!!_X_!!! don't delete */
+
+	min-width: 1275px; /* <= delete at responsive part */
+
 	padding: 20px 10px;
 
-	display: flex;
-	justify-content: stretch;
-	align-items: stretch;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 10px;
 }
 
@@ -271,7 +276,7 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	gap: 12px;
-	
+
 	border-radius: 20px;
 	background-color: #ECF3F8;
 }
@@ -279,6 +284,13 @@ footer {
 .contact-pic {
 	width: 80px;
 	height: 80px;
+}
+
+.footer-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
 }
 
 .div-socials {
