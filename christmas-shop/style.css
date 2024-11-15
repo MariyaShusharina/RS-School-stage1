@@ -120,6 +120,8 @@ p {
 
 .light { color: #FFFFFF; }
 
+.coral { color: #FF4646; }
+
 /* Header */
 
 header {
@@ -169,12 +171,15 @@ nav {
 	background-color: rgba(255, 70, 70, 0.1);
 }
 
-/* Main Styles*/
+/* ----- Main Styles ----- */
+
 
 main {
 	background-color: #FF4646;
 	border-radius: 20px;
 }
+
+/* Hero Section */
 
 .hero {
 	display: flex;
@@ -214,6 +219,29 @@ main {
 .btn-explore:hover {
 	background-color: #FFFFFF;
 	color: #181C29;
+}
+
+/* About Section */
+
+.about {
+	padding: 82px;
+
+	background-image: url("./assets/png/bgs/bg-snow.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.about-div {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+}
+
+.about-text {
+	margin-left: 20px;
 }
 
 /* Footer */
