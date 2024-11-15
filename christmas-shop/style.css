@@ -224,8 +224,7 @@ main {
 /* About Section */
 
 .about {
-	padding: 82px;
-
+	padding: 60px 0;
 	background-image: url("./assets/png/bgs/bg-snow.png");
 	background-size: cover;
 	background-position: center;
@@ -233,6 +232,8 @@ main {
 }
 
 .about-div {
+	margin: 0 82px;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -241,7 +242,8 @@ main {
 }
 
 .about-text {
-	margin-left: 20px;
+	margin-left: 60px;
+	max-width: 410px;
 }
 
 /* Footer */
