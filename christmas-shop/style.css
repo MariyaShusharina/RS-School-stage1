@@ -67,7 +67,7 @@ h1, h2, h3, h4, .action-l, .action-s, .slider-text {
 	text-transform: uppercase;
 }
 
-p, h1 {
+p, h1, h3 {
 	margin: 0;
 }
 
