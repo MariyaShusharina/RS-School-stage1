@@ -165,13 +165,17 @@ nav {
 	padding: 12px 20px;
 	border-radius: 12px;
 	transition: all 0.4s;
+	cursor: pointer;
 }
 
 .nav-item:hover {
 	background-color: rgba(255, 70, 70, 0.1);
+	color: #FF4646;
 }
 
 .nav-item-active {
+	padding: 12px 20px;
+	border-radius: 12px;
 	background-color: rgba(255, 70, 70, 0.1);
 	color: #FF4646;
 }
@@ -208,11 +212,11 @@ main {
 }
 
 .btn-explore {
-	width: 236px;
-	height: 56px;
+	/* width: 236px;
+	height: 56px; */
 	padding: 20px 32px;
 
-	border: none;
+	/* border: none; */
 	border-radius: 20px;
 
 	background-color: #181C29;
@@ -285,6 +289,8 @@ footer {
 	border-radius: 20px;
 	background-color: #ECF3F8;
 }
+
+.contact-card:hover { color: #FF4646; }
 
 .contact-pic {
 	width: 80px;
