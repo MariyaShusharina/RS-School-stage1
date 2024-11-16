@@ -41,7 +41,7 @@ header, main, section, footer {
 a {
 	color: #181C29;
 	text-decoration: none;
-	transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.4s;
 	cursor: pointer;
 }
 
