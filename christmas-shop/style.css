@@ -69,6 +69,7 @@ h1, h2, h3, h4, .action-l, .action-s, .slider-text {
 
 p, h1, h3 {
 	margin: 0;
+	transition: all ease-in-out 0.4s;
 }
 
 h1 {
@@ -329,5 +330,9 @@ footer {
 
 .icon-div:hover .icon {
 	filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
+}
+
+.socials {
+	transition: all ease-in-out 0.4s;
 }
 
