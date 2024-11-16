@@ -41,7 +41,7 @@ header, main, section, footer {
 a {
 	color: #181C29;
 	text-decoration: none;
-	transition: color 0.4s;
+	transition: ease-in-out color 0.4s;
 	cursor: pointer;
 }
 
@@ -164,7 +164,7 @@ nav {
 .nav-item {
 	padding: 12px 20px;
 	border-radius: 12px;
-	transition: all 0.4s;
+	transition: all ease-in-out 0.4s;
 	cursor: pointer;
 }
 
@@ -225,7 +225,7 @@ main {
 	background-color: #181C29;
 	color: #FFFFFF;
 
-	transition: all 0.4s;
+	transition: all ease-in-out 0.4s;
 }
 
 .btn-explore:hover {
@@ -292,7 +292,7 @@ footer {
 	border-radius: 20px;
 	background-color: #ECF3F8;
 
-	transition: 0.4s;
+	transition: ease-in-out 0.4s;
 }
 
 .contact-card:hover p { color: #FF4646; }
@@ -324,7 +324,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 
-	transition: all 0.4s;
+	transition: all ease-in-out 0.4s;
 }
 
 .icon-div:hover {
