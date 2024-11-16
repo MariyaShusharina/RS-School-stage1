@@ -327,7 +327,7 @@ footer {
 	transition: all ease-in-out 0.4s;
 }
 
-.icon-div:hover {
+.icon-div:hover .icon {
 	filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
 }
 
