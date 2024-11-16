@@ -277,6 +277,8 @@ main {
 	background-repeat: no-repeat;
 }
 
+.gifts-ul { justify-content: center; }
+
 .nav-gift-item {
 	padding: 12px 20px;
 	border-radius: 12px;
@@ -309,7 +311,7 @@ main {
 
 .gift-card {
 	width: 310px;
-	height: 230px;
+	height: 342px;
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -328,7 +330,35 @@ main {
 }
 
 .gift-pic {
-	object-fit: cover;
+	width: 310px;
+	height: 230px;
+
+	display: flex;
+	justify-items: center;
+	align-items: center;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.pic-work { background-image: url("./assets/png/gift/for-work.png"); }
+.pic-health { background-image: url("./assets/png/gift/for-health.png"); }
+.pic-harmony { background-image: url("./assets/png/gift/for-harmony.png"); }
+
+.gift-text {
+	width: 310px;
+	height: 112px;
+	padding: 8px 20px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+	gap: 12px;
+
+	overflow: hidden;
+
+	border-radius: 20px;
+	background-color: #FFFFFF;
 }
 
 /* Footer */
