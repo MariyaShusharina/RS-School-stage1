@@ -125,6 +125,10 @@ p {
 
 .coral { color: #FF4646; }
 
+.work { color: #4361FF; }
+.health { color: #06A44F; }
+.harmony { color: #FF43F7; }
+
 /* Header */
 
 header {
@@ -260,6 +264,69 @@ main {
 .about-text {
 	margin-left: 60px;
 	max-width: 410px;
+}
+
+/* Gifts Page styles */
+
+.gifts-main {
+	background-image: url("./assets/png/bgs/bg-garland.png");
+	background-size: contain;
+	background-position-y: top;
+	background-repeat: no-repeat;
+}
+
+.nav-gift-item {
+	padding: 12px 20px;
+	border-radius: 12px;
+	transition: all ease-in-out 0.4s;
+	cursor: pointer;
+}
+
+.nav-gift-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-gift-item-active {
+	padding: 12px 20px;
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gifts-container {
+	padding: 60px, 82px;
+
+	max-width: 1277px;
+
+	min-width: 1276px; /* <== delete at responsive part */
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.gift-card {
+	width: 310px;
+	height: 230px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	overflow: hidden;
+
+	border-radius: 20px;
+	background-color: #ECF3F8;
+
+	cursor: pointer;
+}
+
+.gift-card:hover div h3 {
+	color: #FF4646;
+}
+
+.gift-pic {
+	object-fit: cover;
 }
 
 /* Footer */
