@@ -71,7 +71,7 @@ h1, h2, h3, h4, .action-l, .action-s, .slider-text {
 	text-transform: uppercase;
 }
 
-p, h1, h3 {
+p, h1, h3, h4 {
 	margin: 0;
 	transition: all ease-in-out 0.4s;
 }
@@ -333,11 +333,8 @@ main {
 	width: 310px;
 	height: 230px;
 
-	display: flex;
-	justify-items: center;
-	align-items: center;
-
 	background-size: contain;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
@@ -346,13 +343,13 @@ main {
 .pic-harmony { background-image: url("./assets/png/gift/for-harmony.png"); }
 
 .gift-text {
-	width: 310px;
-	height: 112px;
-	padding: 8px 20px;
+	width: 270px;
+	height: 72px;
+	padding: 20px;
 
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: flex-end;
+	align-items: flex-start;
 	gap: 12px;
 
 	overflow: hidden;
