@@ -348,6 +348,27 @@ main {
 .right { background-image: url("./assets/svg/arrow-right.svg"); }
 */
 
+/* Best Section */
+
+.best {
+	padding: 60px 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	background-image: url("./assets/png/bgs/bg-snow.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.best-gifts {
+	display: flex;
+	gap: 12px;
+}
+
 /* Gifts Page styles */
 
 .gifts-main {
