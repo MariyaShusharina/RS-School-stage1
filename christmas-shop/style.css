@@ -193,6 +193,7 @@ nav {
 	color: #FF4646;
 }
 
+
 /* ----- Main Styles ----- */
 
 
@@ -374,7 +375,47 @@ main {
 	gap: 12px;
 }
 
-/* Gifts Page styles */
+/* CTA Section */
+
+.CTA {
+	padding: 60px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	background-image: url("./assets/png/bgs/bg-snow.png"), url("./assets/png/bgs/bg-forest.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.timer-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.timer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.cell {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* --- Gifts Page styles --- */
+
 
 .gifts-main {
 	padding: 60px 0;
