@@ -71,7 +71,7 @@ h1, h2, h3, h4, .action-l, .action-s, .slider-text {
 	text-transform: uppercase;
 }
 
-p, h1, h3, h4 {
+p, h1, h2, h3, h4 {
 	margin: 0;
 	transition: all ease-in-out 0.4s;
 }
@@ -276,21 +276,25 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	gap: 12px;
 
 	background-image: url("./assets/png/bgs/bg-snow.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	overflow: hidden;
 }
 
 .slider-div {
-	padding: 0;
-	overflow: hidden;
+	padding: 8px 84px;
+	min-width: 2500px;
 
 	display: flex;
 	align-items: center;
 	gap: 20px;
+
+	align-self: flex-start;
 }
 
 .slider-img {
@@ -309,6 +313,8 @@ main {
 .four { background-image: url("./assets/png/fairytale-house.png"); }
 
 .pagination {
+	min-width: 89%;
+
 	display: flex;
 	justify-content: flex-end;
 	gap: 20px;
