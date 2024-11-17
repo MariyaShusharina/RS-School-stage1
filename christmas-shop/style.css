@@ -271,6 +271,14 @@ main {
 /* Gifts Page styles */
 
 .gifts-main {
+	padding: 60px 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
 	background-image: url("./assets/png/bgs/bg-garland.png");
 	background-size: contain;
 	background-position-y: top;
