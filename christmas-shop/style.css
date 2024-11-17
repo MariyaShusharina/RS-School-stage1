@@ -268,6 +268,80 @@ main {
 	max-width: 410px;
 }
 
+/* Slider Section */
+
+.slider {
+	padding: 60px 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	background-image: url("./assets/png/bgs/bg-snow.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slider-div {
+	padding: 0;
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.slider-img {
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.one { background-image: url("./assets/png/snowman.png"); }
+.two { background-image: url("./assets/png/christmas-trees.png"); }
+.three { background-image: url("./assets/png/christmas-tree-ball.png"); }
+.four { background-image: url("./assets/png/fairytale-house.png"); }
+
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+.arrow {
+	width: 56px;
+	height: 56px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: solid #FFFFFF 1px;
+	border-radius: 20px;
+
+	background-color: transparent;
+
+	transition: all ease-in-out 0.4s;
+	cursor: pointer;
+}
+
+.arrow:disabled { filter: opacity(0.4); cursor: not-allowed; }
+.arrow:hover:enabled { background-color: #FFFFFF; }
+.arrow:hover:enabled img { filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%); }
+
+.arrow-svg { transition: all ease-in-out 0.4s; }
+
+/*
+.left { background-image: url("./assets/svg/arrow-left.svg"); }
+.right { background-image: url("./assets/svg/arrow-right.svg"); }
+*/
+
 /* Gifts Page styles */
 
 .gifts-main {
