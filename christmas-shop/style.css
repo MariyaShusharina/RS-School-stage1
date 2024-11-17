@@ -409,8 +409,6 @@ main {
 
 	border-radius: 20px;
 	background-color: #ECF3F8;
-
-	border: none;
 	
 	cursor: pointer;
 }
@@ -440,7 +438,7 @@ main {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: flex-start;
-	gap: 12px;
+	gap: 10px;
 
 	overflow: hidden;
 
