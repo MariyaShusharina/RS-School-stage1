@@ -462,8 +462,6 @@ main {
 }
 
 .gifts-container {
-	padding: 60px, 82px;
-
 	max-width: 1277px;
 
 	min-width: 1276px; /* <== delete at responsive part */
