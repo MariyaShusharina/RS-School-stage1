@@ -183,11 +183,7 @@ nav {
 	background-color: rgba(255, 70, 70, 0.1);
 	color: #FF4646;
 }
-/*
-.nav-item:hover a {
-	color: #FF4646;
-}
-*/
+
 .nav-item-active {
 	padding: 12px 20px;
 	border-radius: 12px;
@@ -491,7 +487,7 @@ main {
 .gifts-container {
 	max-width: 1277px;
 
-	min-width: 1276px; /* <== delete at responsive part */
+	min-width: 80vw; /* <== (changed instead of deleting) -delete-at-responsive-part- */
 
 	display: flex;
 	justify-content: center;
