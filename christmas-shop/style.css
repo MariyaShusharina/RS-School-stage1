@@ -134,7 +134,9 @@ p {
 /* Header */
 
 header {
+	position: relative;
 	padding: 12px 0;
+	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -191,6 +193,31 @@ nav {
 	border-radius: 12px;
 	background-color: rgba(255, 70, 70, 0.1);
 	color: #FF4646;
+}
+
+.burger {
+	width: 40px;
+	height: 40px;
+
+	position: absolute;
+	top: 12px;
+	right: 8px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	visibility: hidden;
+}
+
+.burger-line {
+	width: 20px;
+	height: 1px;
+
+	border-radius: 1px;
+	background-color: #181C29;
 }
 
 
