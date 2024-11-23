@@ -78,13 +78,11 @@
 	.about-div { margin: 0 8px; }
 
 	.about-text {
-	margin: 60px;
-	max-width: 256px;
+		margin: 60px;
+		max-width: 256px;
 	}
 
-	.pic {
-		object-fit: contain;
-	}
+	.pic {}
 
 	.contacts {
 		max-width: 768px;
