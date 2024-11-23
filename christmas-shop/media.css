@@ -44,6 +44,8 @@
 	div, section, header, nav, main, footer { max-width: 1440px; }
 
 	.burger { visibility: hidden; }
+
+	.gifts-container { min-width: 1277px; }
 }
 
 @media screen and (max-width: 1441px) {
@@ -51,6 +53,8 @@
 	div, section, header, nav, main, footer { max-width: 1440px; }
 
 	.burger { visibility: hidden; }
+
+	.gifts-container { min-width: 80vw; }
 }
 
 @media screen and (max-width: 1061px) {
