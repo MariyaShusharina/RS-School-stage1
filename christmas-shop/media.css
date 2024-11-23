@@ -69,8 +69,6 @@
 
 	div, section, header, nav, main, footer { max-width: 768px; }
 
-	header {}
-
 	nav { visibility: hidden; }
 
 	.burger { visibility: visible; }
