@@ -453,6 +453,8 @@ main {
 	background-repeat: no-repeat;
 }
 
+.gifts-text {}
+
 .gifts-ul { justify-content: center; }
 
 .nav-gift-item {
