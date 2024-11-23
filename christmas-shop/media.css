@@ -1,0 +1,57 @@
+
+@media screen and (min-width: 1440px) {
+
+	div, section, header, nav, main, footer { max-width: 1440px; }
+
+	.burger { visibility: hidden; }
+}
+
+@media screen and (max-width: 1441px) {
+
+	div, section, header, nav, main, footer { max-width: 1440px; }
+
+	.burger { visibility: hidden; }
+}
+
+@media screen and (max-width: 1061px) {
+
+	.contacts {
+		grid-template-columns: 1fr;
+		gap: 11px;
+	}
+}
+
+@media screen and (max-width: 769px) {
+
+	div, section, header, nav, main, footer { max-width: 768px; }
+
+	header {}
+
+	nav { visibility: hidden; }
+
+	.burger { visibility: visible; }
+
+	.logo-div { margin-left: 8px; }
+
+	.about-div { margin: 0 8px; }
+
+	.about-text {
+	margin: 60px;
+	max-width: 256px;
+	}
+
+	.pic {
+		object-fit: contain;
+	}
+
+	.contacts {
+		max-width: 768px;
+		min-width: 752px;
+		padding: 20px 8px;
+	}
+
+	.slider-div { padding: 8px; }
+
+	.best-gifts { flex-wrap: wrap; }
+
+}
