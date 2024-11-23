@@ -1,4 +1,44 @@
 
+@media only screen and (hover: hover) {
+
+	a:hover {
+		color: #FF4646;
+	}
+
+	.logo-link:hover {
+		color: #181C29 !important;
+	}
+
+	.nav-item:hover {
+		background-color: rgba(255, 70, 70, 0.1);
+		color: #FF4646;
+	}
+
+	.btn-explore:hover {
+		background-color: #FFFFFF;
+		color: #181C29;
+	}
+
+	.arrow:hover:enabled { background-color: #FFFFFF; }
+	.arrow:hover:enabled img { filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%); }
+
+	.nav-gift-item:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.gift-card:hover div h3 {
+		color: #FF4646;
+	}
+
+	.contact-card:hover p { color: #FF4646; }
+
+	.contact-card:hover h3 { color: #FF4646; }
+
+	.icon-div:hover .icon {
+		filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
+	}
+}
+
 @media screen and (min-width: 1440px) {
 
 	div, section, header, nav, main, footer { max-width: 1440px; }

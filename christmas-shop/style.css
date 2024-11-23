@@ -45,10 +45,6 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
-	color: #FF4646;
-}
-
 .link { transition: all ease-in-out 0.4s; }
 
 ul {
@@ -151,10 +147,6 @@ header {
 
 .logo-link {  }
 
-.logo-link:hover {
-	color: #181C29 !important;
-}
-
 .logo-div {
 	margin-left: 80px;
 	padding: 8px 20px;
@@ -184,11 +176,6 @@ nav {
 	border-radius: 12px;
 	transition: all ease-in-out 0.4s;
 	cursor: pointer;
-}
-
-.nav-item:hover {
-	background-color: rgba(255, 70, 70, 0.1);
-	color: #FF4646;
 }
 
 .nav-item-active {
@@ -267,11 +254,6 @@ main {
 	color: #FFFFFF;
 
 	transition: all ease-in-out 0.4s;
-}
-
-.btn-explore:hover {
-	background-color: #FFFFFF;
-	color: #181C29;
 }
 
 /* About Section */
@@ -374,8 +356,6 @@ main {
 }
 
 .arrow:disabled { filter: opacity(0.4); cursor: not-allowed; }
-.arrow:hover:enabled { background-color: #FFFFFF; }
-.arrow:hover:enabled img { filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%); }
 
 .arrow-svg { transition: all ease-in-out 0.4s; }
 
@@ -482,10 +462,6 @@ main {
 	cursor: pointer;
 }
 
-.nav-gift-item:hover {
-	background-color: rgba(255, 255, 255, 0.2);
-}
-
 .nav-gift-item-active {
 	padding: 12px 20px;
 	border-radius: 12px;
@@ -517,10 +493,6 @@ main {
 	background-color: #ECF3F8;
 	
 	cursor: pointer;
-}
-
-.gift-card:hover div h3 {
-	color: #FF4646;
 }
 
 .gift-pic {
@@ -589,10 +561,6 @@ footer {
 	transition: ease-in-out 0.4s;
 }
 
-.contact-card:hover p { color: #FF4646; }
-
-.contact-card:hover h3 { color: #FF4646; }
-
 .contact-pic {
 	width: 80px;
 	height: 80px;
@@ -619,10 +587,6 @@ footer {
 	align-items: center;
 
 	transition: all ease-in-out 0.4s;
-}
-
-.icon-div:hover .icon {
-	filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
 }
 
 .socials {
