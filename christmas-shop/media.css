@@ -95,3 +95,55 @@
 	.best-gifts { flex-wrap: wrap; }
 
 }
+
+@media screen and (max-width: 381px) {
+
+	div, section, header, nav, main, footer { max-width: 380px; }
+
+	nav {
+		width: 100px;
+		padding: 0;
+		visibility: hidden;
+	}
+
+	.burger { visibility: visible; }
+
+	.logo-div { margin-left: 8px; }
+
+	.hero-div {
+		padding: 120px 8px;
+	}
+
+	.about-div {
+		margin: 0 8px;
+		flex-direction: column;
+	}
+
+	.about-text {
+		margin: 60px 20px;
+		max-width: 100%;
+	}
+
+	.pic {
+		width: 364px;
+	}
+
+	.pagination { min-width: 96%; }
+	
+	.gifts-text { width: 364px; }
+
+	.gifts-ul { gap: 0; }
+	.nav-gift-item-active { padding: 12px 8px; }
+	.nav-gift-item { padding: 12px 8px; }
+
+	.contacts {
+		max-width: 380px;
+		min-width: 364px;
+		padding: 20px 8px;
+	}
+
+	.slider-div { padding: 8px; }
+
+	.best-gifts { flex-wrap: wrap; }
+
+}
