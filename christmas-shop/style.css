@@ -45,10 +45,6 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
-	color: #FF4646;
-}
-
 .link { transition: all ease-in-out 0.4s; }
 
 ul {
@@ -59,8 +55,15 @@ ul {
 li { display: flex; }
 
 .pic {
-	object-fit: contain;
-	border-radius: 20px;
+	width: 638px;
+	height: 528px;
+
+    background-size: cover;
+    background-image: url(./assets/png/santa.png);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
 }
 
 /* Text-styles */
@@ -134,17 +137,15 @@ p {
 /* Header */
 
 header {
+	position: relative;
 	padding: 12px 0;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .logo-link {  }
-
-.logo-link:hover {
-	color: #181C29 !important;
-}
 
 .logo-div {
 	margin-left: 80px;
@@ -177,20 +178,36 @@ nav {
 	cursor: pointer;
 }
 
-.nav-item:hover {
-	background-color: rgba(255, 70, 70, 0.1);
-	color: #FF4646;
-}
-/*
-.nav-item:hover a {
-	color: #FF4646;
-}
-*/
 .nav-item-active {
 	padding: 12px 20px;
 	border-radius: 12px;
 	background-color: rgba(255, 70, 70, 0.1);
 	color: #FF4646;
+}
+
+.burger {
+	width: 40px;
+	height: 40px;
+
+	position: absolute;
+	top: 12px;
+	right: 8px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	visibility: hidden;
+}
+
+.burger-line {
+	width: 20px;
+	height: 1px;
+
+	border-radius: 1px;
+	background-color: #181C29;
 }
 
 
@@ -237,11 +254,6 @@ main {
 	color: #FFFFFF;
 
 	transition: all ease-in-out 0.4s;
-}
-
-.btn-explore:hover {
-	background-color: #FFFFFF;
-	color: #181C29;
 }
 
 /* About Section */
@@ -344,8 +356,6 @@ main {
 }
 
 .arrow:disabled { filter: opacity(0.4); cursor: not-allowed; }
-.arrow:hover:enabled { background-color: #FFFFFF; }
-.arrow:hover:enabled img { filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%); }
 
 .arrow-svg { transition: all ease-in-out 0.4s; }
 
@@ -371,7 +381,8 @@ main {
 }
 
 .best-gifts {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 12px;
 }
 
@@ -442,6 +453,8 @@ main {
 	background-repeat: no-repeat;
 }
 
+.gifts-text {}
+
 .gifts-ul { justify-content: center; }
 
 .nav-gift-item {
@@ -449,10 +462,6 @@ main {
 	border-radius: 12px;
 	transition: all ease-in-out 0.4s;
 	cursor: pointer;
-}
-
-.nav-gift-item:hover {
-	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-gift-item-active {
@@ -464,7 +473,7 @@ main {
 .gifts-container {
 	max-width: 1277px;
 
-	min-width: 1276px; /* <== delete at responsive part */
+	min-width: 80vw; /* <== (changed instead of deleting) -delete-at-responsive-part- */
 
 	display: flex;
 	justify-content: center;
@@ -486,10 +495,6 @@ main {
 	background-color: #ECF3F8;
 	
 	cursor: pointer;
-}
-
-.gift-card:hover div h3 {
-	color: #FF4646;
 }
 
 .gift-pic {
@@ -555,12 +560,8 @@ footer {
 	border-radius: 20px;
 	background-color: #ECF3F8;
 
-	transition: ease-in-out 0.4s;
+	transition: color ease-in-out 0.4s;
 }
-
-.contact-card:hover p { color: #FF4646; }
-
-.contact-card:hover h3 { color: #FF4646; }
 
 .contact-pic {
 	width: 80px;
@@ -588,10 +589,6 @@ footer {
 	align-items: center;
 
 	transition: all ease-in-out 0.4s;
-}
-
-.icon-div:hover .icon {
-	filter: invert(51%) sepia(50%) saturate(6729%) hue-rotate(334deg) brightness(101%) contrast(104%);
 }
 
 .socials {
