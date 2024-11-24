@@ -28,6 +28,7 @@ body {
 	align-items: center;
 	
 	background-color: #FFFFFF;
+	overflow-x: clip;
 }
 
 div, header, main, footer {
