@@ -121,6 +121,8 @@
 
 	.slider-div { padding: 8px; }
 
+	.pagination { min-width: 98%; }
+
 	.best-gifts { grid-template-columns: 1fr 1fr; }
 
 }
