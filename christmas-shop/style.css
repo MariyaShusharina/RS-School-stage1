@@ -527,6 +527,29 @@ main {
 	background-color: #FFFFFF;
 }
 
+.arrow-up {
+	visibility: hidden;
+	
+	width: 56px;
+	height: 56px;
+
+	position: fixed;
+	bottom: 8px;
+	right: 8px;
+	z-index: 10;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #FFFFFF;
+	border: 1px solid #FF4646;
+	border-radius: 100px;
+
+	outline: none;
+	cursor: pointer;
+}
+
 /* Footer */
 
 footer {
