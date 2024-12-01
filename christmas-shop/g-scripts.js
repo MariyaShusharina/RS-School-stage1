@@ -42,7 +42,7 @@ function burger() {
 
 		mobMenu.style.transform = "translate(0, 0)";
 
-		document.body.style.overflowY = "hidden";
+		document.body.style.position = "fixed";
 
 	} else {
 
@@ -53,7 +53,7 @@ function burger() {
 
 		mobMenu.style.transform = "translate(100%, 0)";
 
-		document.body.style.overflowY = "auto";
+		document.body.style.position = "";
 		
 	}
 }
@@ -64,7 +64,7 @@ function hideMenuOnChange() {
 
 	if (www > 768) {
 
-		document.body.style.overflowY = "auto";
+		document.body.style.position = "";
 
 		isMenuOpen = false;
 
