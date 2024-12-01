@@ -1,4 +1,6 @@
 
+// Variables for Slider
+
 const arrowL = document.getElementById("left-arrow");
 const arrowR = document.getElementById("right-arrow");
 
@@ -11,6 +13,17 @@ let offset = 0;
 let offsetFull = 0;
 
 let curWidth = window.innerWidth;
+
+// Variables for Burger-menu
+
+const upLine = document.getElementById("up-line");
+const botLine = document.getElementById("bot-line");
+
+const mobMenu = document.querySelector(".mob-menu");
+
+let isMenuOpen = false;
+
+// Slider functionality
 
 function rightPag() {
 
@@ -28,9 +41,6 @@ function rightPag() {
 		offsetFull -= offset;
 		slider.style.transform = "translate(" + offsetFull + "px, 0)";
 	}
-
-	//console.log(-offsetFull);
-	//console.log((slWidth - ww - 5));
 
 	if ((-offsetFull) >= (slWidth - ww - 5)) {
 		arrowR.disabled = true;
@@ -69,7 +79,6 @@ function leftPag() {
 
 function sliderInit() {
 	let w = window.innerWidth;
-	//console.log(w);
 	if (w != curWidth) {
 		curWidth = w;
 		offset = 0;
@@ -80,4 +89,60 @@ function sliderInit() {
 	}
 }
 
-window.onresize = sliderInit;
+//window.addEventListener("resize", sliderInit());
+
+// Burger-menu functionality
+
+function burger() {
+	if (!isMenuOpen) {
+
+		isMenuOpen = true;
+
+		upLine.style.transform = "translate(0, 4px) rotate(45deg)";
+		botLine.style.transform = "translate(0, -4px) rotate(-45deg)";
+
+		mobMenu.style.transform = "translate(0, 0)";
+
+		document.body.style.overflowY = "hidden";
+
+	} else {
+
+		isMenuOpen = false;
+
+		upLine.style.transform = "translate(0, 0) rotate(0)";
+		botLine.style.transform = "translate(0, 0) rotate(0)";
+
+		mobMenu.style.transform = "translate(100%, 0)";
+
+		document.body.style.overflowY = "auto";
+
+	}
+}
+
+function hideMenuOnChange() {
+
+	let www = window.innerWidth;
+
+	if (www > 768) {
+
+		document.body.style.overflowY = "auto";
+
+		isMenuOpen = false;
+
+		upLine.style.transform = "translate(0, 0) rotate(0)";
+		botLine.style.transform = "translate(0, 0) rotate(0)";
+
+		mobMenu.style.transform = "translate(100%, 0)";
+	}
+}
+
+
+// Function for all Event Listeners on window
+
+
+function resizer() {
+	sliderInit();
+	hideMenuOnChange();
+}
+
+window.addEventListener("resize", resizer);
