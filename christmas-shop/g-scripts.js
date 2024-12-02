@@ -140,6 +140,8 @@ function showGifts(data) {
 
 		card.appendChild(text);
 
+		parent.appendChild(card);
+
 	}
 }
 
