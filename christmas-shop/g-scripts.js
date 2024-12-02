@@ -12,6 +12,17 @@ const mobMenu = document.querySelector(".mob-menu");
 
 let isMenuOpen = false;
 
+// Variables for Gifts-container
+
+const btnAll = document.getElementById("btn-all");
+const btnWork = document.getElementById("btn-work");
+const btnHealth = document.getElementById("btn-health");
+const btnHarmony = document.getElementById("btn-harmony");
+
+const parent = document.querySelector(".gifts-container");
+
+const url = "./gifts.json";
+
 // Up-button functionality
 
 function btnUpDisplay() {
@@ -75,6 +86,23 @@ function hideMenuOnChange() {
 	}
 }
 
+// Gifts-container functionality
+
+let data = 0;
+
+async function loadGifts() {
+
+	const result = await fetch(url);
+	data = await result.json();
+
+	console.log(data);
+
+	showGifts(data);
+}
+
+loadGifts();
+
+//const gifts = JSON.parse(url);
 
 // Function for all Event Listeners on window
 
