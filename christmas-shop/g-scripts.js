@@ -496,12 +496,25 @@ function showModal(name) {
 			wrap.appendChild(card);
 
 			//wrap.addEventListener("click", close);
-			wrap.addEventListener("click", function(event) { event.stopPropagation(); close(); });
+			wrap.addEventListener("click", closeWrap);
 		}
 	}
 }
 
 function close() {
+
+	const modal = document.querySelector(".modal");
+	const wrap = document.querySelector(".wrap");
+
+	wrap.innerHTML = "";
+
+	modal.style.visibility = "hidden";
+	document.body.style.overflowY = "auto";
+}
+
+function closeWrap(event) {
+
+	event.stopPropagation();
 
 	const modal = document.querySelector(".modal");
 	const wrap = document.querySelector(".wrap");
