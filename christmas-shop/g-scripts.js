@@ -425,11 +425,11 @@ function showModal(name) {
 
 				if (k = 0) {
 					val = data[i].superpowers.live;
-				} else if (k = 1) {
+				} else if (k == 1) {
 					val = data[i].superpowers.create;
-				} else if (k = 2) {
+				} else if (k == 2) {
 					val = data[i].superpowers.love;
-				} else if (k = 3) {
+				} else if (k == 3) {
 					val = data[i].superpowers.dream;
 				}
 
@@ -465,7 +465,7 @@ function showModal(name) {
 					sn.setAttribute("alt", "W");
 
 					sn.classList.add("icon-snow");
-					
+
 					divSnow.appendChild(sn);
 				}
 
