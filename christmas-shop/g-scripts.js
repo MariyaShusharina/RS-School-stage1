@@ -146,6 +146,150 @@ function showGifts(data) {
 	}
 }
 
+function showWork(data) {
+
+	parent.innerHTML = "";
+
+	for (let i = 0; i < data.length; i++) {
+
+		let curType = data[i].category;
+
+		if (curType == "For Work") {
+
+			let card = document.createElement("article");
+			card.classList.add("gift-card");
+
+			let div = document.createElement("div");
+			div.classList.add("gift-pic");
+			let type = data[i].category;
+			div.classList.add("pic-work");
+			//if (type == "For Health") { div.classList.add("pic-health"); }
+			//if (type == "For Harmony") { div.classList.add("pic-harmony"); }
+			div.innerHTML = "&nbsp;";
+
+			card.appendChild(div);
+
+			let text = document.createElement("div");
+			text.classList.add("gift-text");
+
+			let h4 = document.createElement("h4");
+			h4.classList.add("work");
+			//if (type == "For Health") { h4.classList.add("health"); }
+			//if (type == "For Harmony") { h4.classList.add("harmony"); }
+			h4.textContent = type;
+			text.appendChild(h4);
+
+			let h3 = document.createElement("h3");
+			h3.classList.add("dark");
+			let name = data[i].name;
+			h3.textContent = name;
+			text.appendChild(h3);
+
+			card.appendChild(text);
+			card.addEventListener("click", function () { showModal(name); } );
+
+			parent.appendChild(card);
+		}
+
+	}
+}
+
+function showHealth(data) {
+
+	parent.innerHTML = "";
+
+	for (let i = 0; i < data.length; i++) {
+
+		let curType = data[i].category;
+
+		if (curType == "For Health") {
+
+			let card = document.createElement("article");
+			card.classList.add("gift-card");
+
+			let div = document.createElement("div");
+			div.classList.add("gift-pic");
+			let type = data[i].category;
+			//if (type == "For Work") { div.classList.add("pic-work"); }
+			div.classList.add("pic-health");
+			//if (type == "For Harmony") { div.classList.add("pic-harmony"); }
+			div.innerHTML = "&nbsp;";
+
+			card.appendChild(div);
+
+			let text = document.createElement("div");
+			text.classList.add("gift-text");
+
+			let h4 = document.createElement("h4");
+			//if (type == "For Work") { h4.classList.add("work"); }
+			h4.classList.add("health");
+			//if (type == "For Harmony") { h4.classList.add("harmony"); }
+			h4.textContent = type;
+			text.appendChild(h4);
+
+			let h3 = document.createElement("h3");
+			h3.classList.add("dark");
+			let name = data[i].name;
+			h3.textContent = name;
+			text.appendChild(h3);
+
+			card.appendChild(text);
+			card.addEventListener("click", function () { showModal(name); } );
+
+			parent.appendChild(card);
+		}
+
+	}
+}
+
+function showHarmony(data) {
+
+	parent.innerHTML = "";
+
+	for (let i = 0; i < data.length; i++) {
+
+		let curType = data[i].category;
+
+		if (curType == "For Harmony") {
+
+			let card = document.createElement("article");
+			card.classList.add("gift-card");
+
+			let div = document.createElement("div");
+			div.classList.add("gift-pic");
+			let type = data[i].category;
+			//if (type == "For Work") { div.classList.add("pic-work"); }
+			//if (type == "For Health") { div.classList.add("pic-health"); }
+			div.classList.add("pic-harmony");
+			div.innerHTML = "&nbsp;";
+
+			card.appendChild(div);
+
+			let text = document.createElement("div");
+			text.classList.add("gift-text");
+
+			let h4 = document.createElement("h4");
+			//if (type == "For Work") { h4.classList.add("work"); }
+			//if (type == "For Health") { h4.classList.add("health"); }
+			h4.classList.add("harmony");
+			h4.textContent = type;
+			text.appendChild(h4);
+
+			let h3 = document.createElement("h3");
+			h3.classList.add("dark");
+			let name = data[i].name;
+			h3.textContent = name;
+			text.appendChild(h3);
+
+			card.appendChild(text);
+			card.addEventListener("click", function () { showModal(name); } );
+
+			parent.appendChild(card);
+		}
+
+	}
+}
+
 function showModal(name) {
 
 	//const cardName = data[i].name;
@@ -154,11 +298,9 @@ function showModal(name) {
 	const wrap = document.querySelector(".wrap");
 
 	modal.style.visibility = "visible";
-	body.style.overflowY = "hidden";
+	document.body.style.overflowY = "hidden";
 
 	wrap.innerHTML = "";
-
-	
 
 	for (let i = 0; i < data.length; i++) {
 
