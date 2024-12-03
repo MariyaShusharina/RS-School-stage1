@@ -423,7 +423,7 @@ function showModal(name) {
 				pStatNum.classList.add("dark");
 				let val = '';
 
-				if (k = 0) {
+				if (k == 0) {
 					val = data[i].superpowers.live;
 				} else if (k == 1) {
 					val = data[i].superpowers.create;
