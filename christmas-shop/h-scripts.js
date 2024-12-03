@@ -164,8 +164,10 @@ function showGifts(data) {
 
 	let rand = [];
 
+	console.log(rand);
+
 	for (let j = 0; j < 4; j++) {
-		rand[j] = (Math.random()) * 35;
+		rand[j] = Math.floor(Math.random() * 35);
 		console.log(rand[j]);
 	}
 
