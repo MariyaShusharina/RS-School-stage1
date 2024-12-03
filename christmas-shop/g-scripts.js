@@ -422,7 +422,7 @@ function showModal(name) {
 				let pStatNum = document.createElement("p");
 				pStatNum.classList.add("dark");
 				let val = '';
-				
+
 				if (k = 0) {
 					val = data[i].superpowers.live;
 				} else if (k = 1) {
@@ -440,7 +440,7 @@ function showModal(name) {
 				let divSnow = document.createElement("div");
 				divSnow.classList.add("div-snow");
 
-				let str = data[i].superpowers.val;
+				let str = val;
 				str = str.toString();
 				let num = str.charAt(1);
 				console.log(num);
