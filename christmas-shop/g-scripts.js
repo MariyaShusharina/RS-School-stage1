@@ -107,6 +107,18 @@ function showGifts(data) {
 
 	parent.innerHTML = "";
 
+	btnAll.classList.add("nav-gift-item-active");
+	btnAll.classList.remove("nav-gift-item");
+
+	btnWork.classList.add("nav-gift-item");
+	btnWork.classList.remove("nav-gift-item-active");
+
+	btnHealth.classList.add("nav-gift-item");
+	btnHealth.classList.remove("nav-gift-item-active");
+
+	btnHarmony.classList.add("nav-gift-item");
+	btnHarmony.classList.remove("nav-gift-item-active");
+
 	for (let i = 0; i < data.length; i++) {
 
 		let card = document.createElement("article");
@@ -149,6 +161,18 @@ function showGifts(data) {
 function showWork(data) {
 
 	parent.innerHTML = "";
+
+	btnAll.classList.add("nav-gift-item");
+	btnAll.classList.remove("nav-gift-item-active");
+
+	btnWork.classList.add("nav-gift-item-active");
+	btnWork.classList.remove("nav-gift-item");
+
+	btnHealth.classList.add("nav-gift-item");
+	btnHealth.classList.remove("nav-gift-item-active");
+
+	btnHarmony.classList.add("nav-gift-item");
+	btnHarmony.classList.remove("nav-gift-item-active");
 
 	for (let i = 0; i < data.length; i++) {
 
@@ -198,6 +222,18 @@ function showHealth(data) {
 
 	parent.innerHTML = "";
 
+	btnAll.classList.add("nav-gift-item");
+	btnAll.classList.remove("nav-gift-item-active");
+
+	btnWork.classList.add("nav-gift-item");
+	btnWork.classList.remove("nav-gift-item-active");
+
+	btnHealth.classList.add("nav-gift-item-active");
+	btnHealth.classList.remove("nav-gift-item");
+
+	btnHarmony.classList.add("nav-gift-item");
+	btnHarmony.classList.remove("nav-gift-item-active");
+
 	for (let i = 0; i < data.length; i++) {
 
 		let curType = data[i].category;
@@ -245,6 +281,18 @@ function showHealth(data) {
 function showHarmony(data) {
 
 	parent.innerHTML = "";
+
+	btnAll.classList.add("nav-gift-item");
+	btnAll.classList.remove("nav-gift-item-active");
+
+	btnWork.classList.add("nav-gift-item");
+	btnWork.classList.remove("nav-gift-item-active");
+
+	btnHealth.classList.add("nav-gift-item");
+	btnHealth.classList.remove("nav-gift-item-active");
+
+	btnHarmony.classList.add("nav-gift-item-active");
+	btnHarmony.classList.remove("nav-gift-item");
 
 	for (let i = 0; i < data.length; i++) {
 
