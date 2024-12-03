@@ -231,7 +231,7 @@ function timer() {
 	function calculate() {
 		let start = Date.now();
 
-		let timeRem = (start - end) / 1000;
+		let timeRem = Math.floor((end - start) / 1000);
 
 		days = timeRem / 86400;
 		timeRem = timeRem % 86400;
