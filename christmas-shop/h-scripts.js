@@ -212,6 +212,47 @@ function showGifts(data) {
 	}
 }
 
+// Timer (all)
+
+const day = document.getElementById("d");
+const hour = document.getElementById("h");
+const minute = document.getElementById("m");
+const second = document.getElementById("s");
+
+function timer() {
+
+	let days = 0;
+	let hours = 0;
+	let mins = 0;
+	let seconds = 0;
+
+	let end = new Date(Date.UTC(2025, 1, 1, 0, 0, 0, 0));
+
+	function calculate() {
+		let start = Date.now();
+
+		let timeRem = (start - end) / 1000;
+
+		days = timeRem / 86400;
+		timeRem = timeRem % 86400;
+
+		hours = timeRem / 3600;
+		timeRem = timeRem % 3600;
+
+		mins = timeRem / 60;
+		seconds = timeRem % 60;
+
+		day.textContent = days;
+		hour.textContent = hours;
+		minute.textContent = mins;
+		second.textContent = seconds;
+	}
+
+	setInterval(calculate, 1000);
+}
+
+timer();
+
 
 // Function for all Event Listeners on window
 
