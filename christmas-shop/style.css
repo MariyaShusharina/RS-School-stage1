@@ -612,6 +612,78 @@ main {
 	background-color: rgba(24, 28, 41, 0.8);
 }
 
+.modal-card {
+	width: 70vw;
+	height: auto;
+
+	max-width: 400px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	overflow: hidden;
+
+	border-radius: 20px;
+	background-color: #ECF3F8;
+	
+	cursor: auto;
+}
+
+.div-stats {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column nowrap;
+	align-items: center;
+	gap: 0;
+}
+
+.stat {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.stat-div {
+	width: 50%;
+
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.div-snow {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.icon-snow {
+	width: 16px;
+	height: 16px;
+
+	filter: opacity(0.1);
+}
+
+.icon-snow-red {
+	filter: opacity(1);
+}
+
+.close-icon {
+	width: 24px;
+	height: 24px;
+}
+
+#close {
+	position: relative;
+	top: 8px;
+	right: 8px;
+	z-index: 1010;
+}
+
 /* Footer */
 
 footer {
