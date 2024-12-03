@@ -29,9 +29,18 @@
 				</ul>
 			</nav>
 
-			<div class="burger">
-				<span class="burger-line"></span>
-				<span class="burger-line"></span>
+			<div class="burger" onclick="burger()">
+				<span id="up-line" class="burger-line"></span>
+				<span id="bot-line" class="burger-line"></span>
+			</div>
+
+			<div class="mob-menu">
+				<ul class="nav-list mob-nav">
+					<li><a href="./gifts.html" class="nav-item action-l" onclick="burger()">gifts</a></li>
+					<li><a href="#about" class="nav-item action-l" onclick="burger()">about</a></li>
+					<li><a href="#best" class="nav-item action-l" onclick="burger()">best</a></li>
+					<li><a href="#contact" class="nav-item action-l" onclick="burger()">contacts</a></li>
+				</ul>
 			</div>
 		</header>
 		
@@ -74,8 +83,8 @@
 				</div>
 
 				<div class="pagination">
-					<button class="arrow" disabled><img src="./assets/svg/arrow-left.svg" class="arrow-svg" alt="Left Arrow"></button>
-					<button class="arrow"><img src="./assets/svg/arrow-right.svg" class="arrow-svg" alt="Right Arrow"></button>
+					<button id="left-arrow" onclick="leftPag()" class="arrow" disabled><img src="./assets/svg/arrow-left.svg" class="arrow-svg" alt="Left Arrow"></button>
+					<button id="right-arrow" onclick="rightPag()" class="arrow"><img src="./assets/svg/arrow-right.svg" class="arrow-svg" alt="Right Arrow"></button>
 				</div>
 			</section>
 
@@ -141,28 +150,28 @@
 
 					<div class="timer">
 						<div class="cell">
-							<h2 class="light">47</h2>
+							<h2 class="light" id="d">47</h2>
 							<h4 class="light">days</h4>
 						</div>
 
 						<span class="line"></span>
 
 						<div class="cell">
-							<h2 class="light">5</h2>
+							<h2 class="light" id="h">5</h2>
 							<h4 class="light">hours</h4>
 						</div>
 
 						<span class="line"></span>
 
 						<div class="cell">
-							<h2 class="light">34</h2>
+							<h2 class="light" id="m">34</h2>
 							<h4 class="light">minutes</h4>
 						</div>
 
 						<span class="line"></span>
 
 						<div class="cell">
-							<h2 class="light">12</h2>
+							<h2 class="light" id="s">12</h2>
 							<h4 class="light">seconds</h4>
 						</div>
 					</div>
@@ -223,5 +232,7 @@
 				</a>
 			</div>
 		</footer>
+
+		<script src="./h-scripts.js"></script>
 	</body>
 </html>

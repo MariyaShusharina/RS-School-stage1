@@ -29,9 +29,18 @@
 				</ul>
 			</nav>
 
-			<div class="burger">
-				<span class="burger-line"></span>
-				<span class="burger-line"></span>
+			<div class="burger" onclick="burger()">
+				<span id="up-line" class="burger-line"></span>
+				<span id="bot-line" class="burger-line"></span>
+			</div>
+
+			<div class="mob-menu">
+				<ul class="nav-list mob-nav">
+					<li class="nav-item-active action-l" onclick="burger()">gifts</li>
+					<li><a href="./home.html#about" class="nav-item action-l" onclick="burger()">about</a></li>
+					<li><a href="./home.html#best" class="nav-item action-l" onclick="burger()">best</a></li>
+					<li><a href="#contact" class="nav-item action-l" onclick="burger()">contacts</a></li>
+				</ul>
 			</div>
 		</header>
 		
@@ -41,10 +50,10 @@
 			</div>
 
 			<ul class="nav-list gifts-ul">
-				<li class="action-s light nav-gift-item-active">All</li>
-				<li class="action-s light nav-gift-item">For Work</li>
-				<li class="action-s light nav-gift-item">For Health</li>
-				<li class="action-s light nav-gift-item">For Harmony</li>
+				<li><button id="btn-all" class="action-s light nav-gift-item-active" onclick="showGifts(data)">All</button></li>
+				<li><button id="btn-work" class="action-s light nav-gift-item" onclick="showWork(data)">For Work</button></li>
+				<li><button id="btn-health" class="action-s light nav-gift-item" onclick="showHealth(data)">For Health</button></li>
+				<li><button id="btn-harmony" class="action-s light nav-gift-item" onclick="showHarmony(data)">For Harmony</button></li>
 			</ul>
 
 			<div class="gifts-container">
@@ -184,7 +193,17 @@
 					</div>
 				</article>
 			</div>
+
+			<button class="arrow-up" onclick="scrollUp()">
+				<img src="./assets/svg/arrow-up.svg" class="icon" alt="UP">
+			</button>
 		</main>
+
+		<div class="modal">
+			<div class="wrap">
+				&nbsp;
+			</div>
+		</div>
 		
 		<footer id="contact">
 			<div class="contacts">
@@ -239,5 +258,7 @@
 				</a>
 			</div>
 		</footer>
+
+		<script src="./g-scripts.js"></script>
 	</body>
 </html>
