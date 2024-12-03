@@ -432,6 +432,7 @@ function showModal(name) {
 					val = "dream";
 				}
 				pStatNum.textContent = data[i].superpowers.val;
+				console.log(pStatNum);
 				statDiv.appendChild(pStatNum);
 
 				let divSnow = document.createElement("div");
