@@ -437,8 +437,10 @@ function showModal(name) {
 				let divSnow = document.createElement("div");
 				divSnow.classList.add("div-snow");
 
-				let string = data[i].superpowers.val;
-				let num = string.charAt(1);
+				let str = data[i].superpowers.val;
+				str = str.toString();
+				let num = str.charAt(1);
+				console.log(num);
 				let remain = 5 - num;
 
 				for (let m = 0; m < num; m++) {
