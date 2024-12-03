@@ -422,17 +422,19 @@ function showModal(name) {
 				let pStatNum = document.createElement("p");
 				pStatNum.classList.add("dark");
 				let val = '';
+				
 				if (k = 0) {
-					val = "live";
+					val = data[i].superpowers.live;
 				} else if (k = 1) {
-					val = "create";
+					val = data[i].superpowers.create;
 				} else if (k = 2) {
-					val = "love";
+					val = data[i].superpowers.love;
 				} else if (k = 3) {
-					val = "dream";
+					val = data[i].superpowers.dream;
 				}
-				pStatNum.textContent = data[i].superpowers.val;
-				console.log(data[i].superpowers.val);
+
+				pStatNum.textContent = val;
+				console.log(val);
 				statDiv.appendChild(pStatNum);
 
 				let divSnow = document.createElement("div");
