@@ -459,7 +459,7 @@ function showModal(name) {
 					divSnow.appendChild(sn);
 				}
 
-				statdiv.appendChild(divSnow);
+				statDiv.appendChild(divSnow);
 
 				stat.appendChild(statDiv);
 
