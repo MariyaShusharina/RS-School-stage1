@@ -330,9 +330,10 @@ function showHarmony(data) {
 			text.appendChild(h3);
 
 			card.appendChild(text);
-			card.addEventListener("click", function () { showModal(name); } );
 
 			parent.appendChild(card);
+
+			card.addEventListener("click", function () { showModal(`${name}`); } );
 		}
 
 	}
