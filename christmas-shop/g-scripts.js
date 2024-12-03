@@ -359,7 +359,7 @@ function showModal(name) {
 			card.classList.add("modal-card");
 
 			let div = document.createElement("div");
-			div.classList.add("gift-pic");
+			div.classList.add("modal-pic");
 			let type = data[i].category;
 			if (type == "For Work") { div.classList.add("pic-work"); }
 			if (type == "For Health") { div.classList.add("pic-health"); }
@@ -369,7 +369,7 @@ function showModal(name) {
 			card.appendChild(div);
 
 			let text = document.createElement("div");
-			text.classList.add("gift-text");
+			text.classList.add("modal-text");
 
 			let h4 = document.createElement("h4");
 			if (type == "For Work") { h4.classList.add("work"); }
@@ -448,14 +448,24 @@ function showModal(name) {
 
 				for (let m = 0; m < num; m++) {
 					let sn = document.createElement("img");
+
+					sn.setAttribute("src", "./assets/svg/snowflake.svg");
+					sn.setAttribute("alt", "W");
+
 					sn.classList.add("icon-snow");
 					sn.classList.add("icon-snow-red");
+
 					divSnow.appendChild(sn);
 				}
 
 				for (let l = 0; l < remain; l++) {
 					let sn = document.createElement("img");
+
+					sn.setAttribute("src", "./assets/svg/snowflake.svg");
+					sn.setAttribute("alt", "W");
+
 					sn.classList.add("icon-snow");
+					
 					divSnow.appendChild(sn);
 				}
 
