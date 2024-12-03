@@ -496,6 +496,7 @@ function showModal(name) {
 			wrap.appendChild(card);
 
 			wrap.addEventListener("click", close);
+			wrap.addEventListener("click", function(event) { event.stopPropagation(); });
 		}
 	}
 }
