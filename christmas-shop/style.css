@@ -589,6 +589,29 @@ main {
 	cursor: pointer;
 }
 
+/* Modal Window */
+
+.modal {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	visibility: hidden;
+}
+
+.wrap {
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(24, 28, 41, 0.8);
+}
+
 /* Footer */
 
 footer {
