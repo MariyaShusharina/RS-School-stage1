@@ -341,8 +341,6 @@ function showHarmony(data) {
 
 function showModal(name) {
 
-	//const cardName = data[i].name;
-
 	const modal = document.querySelector(".modal");
 	const wrap = document.querySelector(".wrap");
 
@@ -358,7 +356,7 @@ function showModal(name) {
 		if (name == curName) {
 
 			let card = document.createElement("article");
-			card.classList.add("gift-card");
+			card.classList.add("modal-card");
 
 			let div = document.createElement("div");
 			div.classList.add("gift-pic");
@@ -386,16 +384,116 @@ function showModal(name) {
 			h3.textContent = cardname;
 			text.appendChild(h3);
 
-			card.appendChild(text);
-			card.addEventListener("click", showModal)
+			let p = document.createElement("p");
+			p.classList.add("dark");
+			let pText = data[i].description;
+			p.textContent = pText;
+			text.appendChild(p);
 
-			parent.appendChild(card);
+			let h4super = document.createElement("h4");
+			h4super.classList.add("dark");
+			h4super.textContent = "Adds superpowers to:";
+			text.appendChild(h4super);
+
+			let divStats = document.createElement("div");
+			divStats.classList.add("div-stats");
+			for (let k = 0; k < 4; k++) {
+				let stat = document.createElement("div");
+				stat.classList.add("stat");
+
+				let pStatName = document.createElement("p");
+				pStatName.classList.add("dark");
+				let st = '';
+				if (k = 0) {
+					st = "Live";
+				} else if (k = 1) {
+					st = "Create";
+				} else if (k = 2) {
+					st = "Love";
+				} else if (k = 3) {
+					st = "Dream";
+				}
+				pStatName.textContent = st;
+				stat.appendChild(pStatName);
+
+				let statDiv =document.createElement("div");
+				statDiv.classList.add("stat-div");
+
+				let pStatNum = document.createElement("p");
+				pStatNum.classList.add("dark");
+				let val = '';
+				if (k = 0) {
+					val = "live";
+				} else if (k = 1) {
+					val = "create";
+				} else if (k = 2) {
+					val = "love";
+				} else if (k = 3) {
+					val = "dream";
+				}
+				pStatNum.textContent = data[i].superpowers.val;
+				statDiv.appendChild(pStatNum);
+
+				let divSnow = document.createElement("div");
+				divSnow.classList.add("div-snow");
+
+				let string = data[i].superpowers.val;
+				let num = string.charAt(1);
+				let remain = 5 - num;
+
+				for (let m = 0; m < num; m++) {
+					let sn = document.createElement("img");
+					sn.classList.add("icon-snow");
+					sn.classList.add("icon-snow-red");
+					divSnow.appendChild(sn);
+				}
+
+				for (let m = 0; m < remain; m++) {
+					let sn = document.createElement("img");
+					sn.classList.add("icon-snow");
+					divSnow.appendChild(sn);
+				}
+
+				statdiv.appendChild(divSnow);
+
+				stat.appendChild(statDiv);
+
+				divStats.appendChild(stat);
+			}
+			text.appendChild(divStats);
+
+			card.appendChild(text);
+
+
+			let cross = document.createElement("div");
+			cross.classList.add("icon-div");
+			cross.setAttribute("id", "close");
+
+			let svg = document.createElement("img");
+			svg.setAttribute("src", "./assets/svg/close.svg");
+			svg.setAttribute("alt", "X");
+			svg.classList.add("close-icon");
+			cross.appendChild(svg);
+
+			card.appendChild(cross);
+			cross.addEventListener("click", close);
+
+			wrap.appendChild(card);
+
+			wrap.addEventListener("click", close);
 		}
 	}
-	
-	
+}
 
+function close() {
 
+	const modal = document.querySelector(".modal");
+	const wrap = document.querySelector(".wrap");
+
+	wrap.innerHTML = "";
+
+	modal.style.visibility = "hidden";
+	document.body.style.overflowY = "auto";
 }
 
 
