@@ -359,7 +359,7 @@ function showModal(name) {
 			card.classList.add("modal-card");
 
 			let div = document.createElement("div");
-			div.classList.add("gift-pic");
+			div.classList.add("modal-pic");
 			let type = data[i].category;
 			if (type == "For Work") { div.classList.add("pic-work"); }
 			if (type == "For Health") { div.classList.add("pic-health"); }
@@ -369,7 +369,7 @@ function showModal(name) {
 			card.appendChild(div);
 
 			let text = document.createElement("div");
-			text.classList.add("gift-text");
+			text.classList.add("modal-text");
 
 			let h4 = document.createElement("h4");
 			if (type == "For Work") { h4.classList.add("work"); }
@@ -423,13 +423,13 @@ function showModal(name) {
 				pStatNum.classList.add("dark");
 				let val = '';
 
-				if (k = 0) {
+				if (k == 0) {
 					val = data[i].superpowers.live;
-				} else if (k = 1) {
+				} else if (k == 1) {
 					val = data[i].superpowers.create;
-				} else if (k = 2) {
+				} else if (k == 2) {
 					val = data[i].superpowers.love;
-				} else if (k = 3) {
+				} else if (k == 3) {
 					val = data[i].superpowers.dream;
 				}
 
@@ -448,14 +448,24 @@ function showModal(name) {
 
 				for (let m = 0; m < num; m++) {
 					let sn = document.createElement("img");
+
+					sn.setAttribute("src", "./assets/svg/snowflake.svg");
+					sn.setAttribute("alt", "W");
+
 					sn.classList.add("icon-snow");
 					sn.classList.add("icon-snow-red");
+
 					divSnow.appendChild(sn);
 				}
 
 				for (let l = 0; l < remain; l++) {
 					let sn = document.createElement("img");
+
+					sn.setAttribute("src", "./assets/svg/snowflake.svg");
+					sn.setAttribute("alt", "W");
+
 					sn.classList.add("icon-snow");
+
 					divSnow.appendChild(sn);
 				}
 
@@ -485,12 +495,26 @@ function showModal(name) {
 
 			wrap.appendChild(card);
 
-			wrap.addEventListener("click", close);
+			//wrap.addEventListener("click", close);
+			wrap.addEventListener("click", closeWrap);
 		}
 	}
 }
 
 function close() {
+
+	const modal = document.querySelector(".modal");
+	const wrap = document.querySelector(".wrap");
+
+	wrap.innerHTML = "";
+
+	modal.style.visibility = "hidden";
+	document.body.style.overflowY = "auto";
+}
+
+function closeWrap(event) {
+
+	event.stopPropagation();
 
 	const modal = document.querySelector(".modal");
 	const wrap = document.querySelector(".wrap");
