@@ -404,13 +404,13 @@ function showModal(name) {
 				let pStatName = document.createElement("p");
 				pStatName.classList.add("dark");
 				let st = '';
-				if (k = 0) {
+				if (k == 0) {
 					st = "Live";
-				} else if (k = 1) {
+				} else if (k == 1) {
 					st = "Create";
-				} else if (k = 2) {
+				} else if (k == 2) {
 					st = "Love";
-				} else if (k = 3) {
+				} else if (k == 3) {
 					st = "Dream";
 				}
 				pStatName.textContent = st;
@@ -453,7 +453,7 @@ function showModal(name) {
 					divSnow.appendChild(sn);
 				}
 
-				for (let m = 0; m < remain; m++) {
+				for (let l = 0; l < remain; l++) {
 					let sn = document.createElement("img");
 					sn.classList.add("icon-snow");
 					divSnow.appendChild(sn);
