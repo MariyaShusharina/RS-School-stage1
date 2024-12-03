@@ -226,21 +226,21 @@ function timer() {
 	let mins = 0;
 	let seconds = 0;
 
-	let end = new Date(Date.UTC(2025, 1, 1, 0, 0, 0, 0));
+	let end = new Date(Date.UTC(2025, 0, 1, 0, 0, 0, 0));
 
 	function calculate() {
 		let start = Date.now();
 
 		let timeRem = Math.floor((end - start) / 1000);
 
-		days = timeRem / 86400;
+		days = Math.floor(timeRem / 86400);
 		timeRem = timeRem % 86400;
 
-		hours = timeRem / 3600;
+		hours = Math.floor(timeRem / 3600);
 		timeRem = timeRem % 3600;
 
-		mins = timeRem / 60;
-		seconds = timeRem % 60;
+		mins = Math.floor(timeRem / 60);
+		seconds = Math.floor(timeRem % 60);
 
 		day.textContent = days;
 		hour.textContent = hours;
