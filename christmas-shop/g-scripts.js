@@ -495,26 +495,16 @@ function showModal(name) {
 
 			wrap.appendChild(card);
 
-			//wrap.addEventListener("click", close);
-			wrap.addEventListener("click", closeWrap);
+			wrap.addEventListener("click", close);
+
+			const stopPropag = function(event) { event.stopPropagation(); }
+
+			card.addEventListener("click", stopPropag);
 		}
 	}
 }
 
 function close() {
-
-	const modal = document.querySelector(".modal");
-	const wrap = document.querySelector(".wrap");
-
-	wrap.innerHTML = "";
-
-	modal.style.visibility = "hidden";
-	document.body.style.overflowY = "auto";
-}
-
-function closeWrap(event) {
-
-	event.stopPropagation();
 
 	const modal = document.querySelector(".modal");
 	const wrap = document.querySelector(".wrap");
