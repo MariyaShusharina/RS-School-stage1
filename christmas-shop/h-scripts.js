@@ -164,12 +164,24 @@ function showGifts(data) {
 
 	let rand = [];
 
-	console.log(rand);
+	function shuffle() {
+		for (let j = 0; j < 4; j++) {
+			rand[j] = Math.floor(Math.random() * 35);
+			console.log(rand[j]);
 
-	for (let j = 0; j < 4; j++) {
-		rand[j] = Math.floor(Math.random() * 35);
-		console.log(rand[j]);
+			for (let r = 0; r < j; r++) {
+
+				if (rand[j] == rand[r]) {
+					while (rand[r] == rand[j]) { rand[j] = Math.floor(Math.random() * 35); }
+					console.log(rand[j]);
+				}
+			}
+		}
 	}
+
+	shuffle();
+
+	console.log(rand);
 
 	for (let i = 0; i < data.length; i++) {
 
