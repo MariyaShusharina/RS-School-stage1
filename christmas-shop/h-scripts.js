@@ -383,7 +383,10 @@ function showModal(name) {
 			wrap.appendChild(card);
 
 			wrap.addEventListener("click", close);
-			wrap.addEventListener("click", function(event) { event.stopPropagation(); });
+
+			const stopPropag = function(event) { event.stopPropagation(); }
+
+			card.addEventListener("click", stopPropag);
 		}
 	}
 }
