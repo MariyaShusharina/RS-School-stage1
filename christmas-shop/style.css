@@ -593,6 +593,7 @@ main {
 
 .modal {
 	width: 100%;
+	max-width: 100vw;
 	height: 100%;
 
 	position: fixed;
@@ -607,6 +608,7 @@ main {
 
 .wrap {
 	width: 100%;
+	max-width: 100vw;
 	height: 100%;
 
 	display: flex;
