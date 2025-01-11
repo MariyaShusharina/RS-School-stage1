@@ -64,5 +64,11 @@ p {
 .repeat-btn {}
 .next-btn {}
 
+.difficulty {}
+
+.easy-diff {}
+.med-diff {}
+.hard-diff {}
+
   background-color: #ffffff;
 }
