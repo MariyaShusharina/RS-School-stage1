@@ -160,7 +160,7 @@ function showSequence() {}
 
 function repeatSequence() {
   showSequence();
-  document.querySelector("repeat-btn").setAttribute("disabled", true);
+  document.querySelector(".repeat-btn").setAttribute("disabled", true);
 }
 
 function nextRound() {}
