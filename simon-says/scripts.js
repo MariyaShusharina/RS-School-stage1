@@ -154,7 +154,7 @@ function loadBody() {
 
 function startGame() {}
 
-function newGamre() {}
+function newGame() {}
 
 function showSequence() {}
 
