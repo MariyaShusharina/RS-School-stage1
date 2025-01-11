@@ -98,5 +98,18 @@ p {
   color: black;
 }
 
+.field {
+  height: 2rem;
+  width: 12rem;
+
+  border-radius: 0.5rem;
+  boreder-width: 1px;
+  border-color: #cccccc;
+
   background-color: #ffffff;
+
+  color: #000000;
+  text-transform: uppercase;
+}
+
 }
