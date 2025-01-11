@@ -136,18 +136,16 @@ p {
 
   border: 1px solid rgba(204, 204, 204, 1);
 
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgba(204, 204, 204, 0.2);
 
   color: #000000;
   text-transform: uppercase;
 
-  transition: filter 0.4s;
-  transition: color 0.4s;
-  transition: background-color 0.4s;
+  transition: all 0.4s;
 }
 
 .key-btn:hover {
-  background-color: rgba(0, 187, 119, 0.3);
+  background-color: rgba(0, 187, 119, 0.2);
   border-color: rgba(0, 119, 85, 1);
   filter: drop-shadow(0 0 0.5rem #00bb77);
 }
