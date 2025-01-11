@@ -1,4 +1,11 @@
 
+/* Variables */
+
+let mode = 0;
+let word = '';
+
+/* Generation of Page Content */
+
 // Heading
 
 let h1 = document.createElement("h1");
@@ -135,6 +142,9 @@ section.appendChild(roundsDiv);
 section.appendChild(alertDiv);
 section.appendChild(displayField);
 section.appendChild(virtKeyboard);
+
+
+/* Functionality */
 
 
 function loadBody() {
