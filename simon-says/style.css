@@ -77,5 +77,26 @@ p {
 
 .num {}
 
+.alert {
+  border-color: transparent;
+  border-radius: 0.5rem;
+  border-width: 1px;
+
+  background-color: transparent;
+  color: transparent;
+}
+
+.done {
+  border-color: #007733;
+  background-color: rgba(0, 119, 51, 0.3);
+  color: black;
+}
+
+.fail {
+  border-color: #bb0000;
+  background-color: rgba(187, 0, 0, 0.3);
+  color: black;
+}
+
   background-color: #ffffff;
 }
