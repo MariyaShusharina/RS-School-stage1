@@ -55,5 +55,14 @@ p {
   display: none;
 }
 
+/* Named Styles */
+
+.menu {}
+
+.start-btn {}
+.new-game-btn {}
+.repeat-btn {}
+.next-btn {}
+
   background-color: #ffffff;
 }
