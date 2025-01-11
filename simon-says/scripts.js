@@ -73,6 +73,12 @@ roundNum.classList.add("num");
 roundsDiv.appendChild(roundPar);
 roundsDiv.appendChild(roundNum);
 
+// Alert Div
+
+let alertDiv = document.createElement("div");
+alertDiv.classList.add("alert");
+alertDiv.textContent = "No alert";
+
 
 function loadBody() {
   document.body.appendChild(h1);
