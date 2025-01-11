@@ -37,6 +37,27 @@ menu.appendChild(newGameButton);
 menu.appendChild(repeatButton);
 menu.appendChild(nextButton);
 
+// Difficulty menu
+
+let diff = document.createElement("div");
+diff.classList.add("difficulty");
+
+let easyBtn = document.createElement("button");
+easyBtn.textContent = "Easy";
+easyBtn.classList.add("easy-diff");
+
+let medBtn = document.createElement("button");
+medBtn.textContent = "Medium";
+medBtn.classList.add("med-diff");
+
+let hardBtn = document.createElement("button");
+hardBtn.textContent = "Hard";
+hardBtn.classList.add("hard-diff");
+
+diff.appendChild(easyBtn);
+diff.appendChild(medBtn);
+diff.appendChild(hardBtn);
+
 
 function loadBody() {
   document.body.appendChild(h1);
