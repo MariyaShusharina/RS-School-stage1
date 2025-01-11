@@ -16,21 +16,25 @@ menu.classList.add("menu");
 let startButton = document.createElement("button");
 startButton.textContent = "Start";
 startButton.classList.add("start-btn");
+startButton.addEventListener("click", startGame);
 
 let newGameButton = document.createElement("button");
 newGameButton.textContent = "New Game";
 newGameButton.classList.add("new-game-btn");
 newGameButton.classList.add("hid");
+newGameButton.addEventListener("click", newGame);
 
 let repeatButton = document.createElement("button");
 repeatButton.textContent = "Repeat the Sequence";
 repeatButton.classList.add("repeat-btn");
 repeatButton.classList.add("hid");
+repeatButton.addEventListener("click", repeatSequence);
 
 let nextButton = document.createElement("button");
 nextButton.textContent = "Next";
 nextButton.classList.add("next-btn");
 nextButton.classList.add("hid");
+nextButton.addEventListener("click", nextRound);
 
 menu.appendChild(startButton);
 menu.appendChild(newGameButton);
@@ -45,14 +49,17 @@ diff.classList.add("difficulty");
 let easyBtn = document.createElement("button");
 easyBtn.textContent = "Easy";
 easyBtn.classList.add("easy-diff");
+easyBtn.addEventListener("click", easyMode);
 
 let medBtn = document.createElement("button");
 medBtn.textContent = "Medium";
 medBtn.classList.add("med-diff");
+medBtn.addEventListener("click", medMode);
 
 let hardBtn = document.createElement("button");
 hardBtn.textContent = "Hard";
 hardBtn.classList.add("hard-diff");
+hardBtn.addEventListener("click", hardMode);
 
 diff.appendChild(easyBtn);
 diff.appendChild(medBtn);
@@ -95,8 +102,10 @@ numKeys.classList.add("numbers");
 for (let i = 0; i < 10; i++) {
   let k = document.createElement("button");
   k.classList.add("key-btn");
-  k.setAttribute("id", i);
+  const id = 48 + i;
+  k.setAttribute("id", id);
   k.textContent = i;
+  k.addEventListener("click", function () { checkLetter(id); })
   numKeys.appendChild(k);
 }
 
@@ -109,6 +118,7 @@ for (let i = 0; i < 26; i++) {
   const id = 65 + i;
   k.setAttribute("id", id);
   k.textContent = String.fromCharCode(id);
+  k.addEventListener("click", function () { checkLetter(id); })
   strKeys.appendChild(k);
 }
 
