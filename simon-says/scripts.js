@@ -58,6 +58,21 @@ diff.appendChild(easyBtn);
 diff.appendChild(medBtn);
 diff.appendChild(hardBtn);
 
+// Rounds
+
+let roundsDiv = document.createElement("div");
+roundsDiv.classList.add("rounds");
+
+let roundPar = document.createElement("p");
+roundPar.textContent = "Round: ";
+
+let roundNum = document.createElement("p");
+roundNum.textContent = "-";
+roundNum.classList.add("num");
+
+roundsDiv.appendChild(roundPar);
+roundsDiv.appendChild(roundNum);
+
 
 function loadBody() {
   document.body.appendChild(h1);
