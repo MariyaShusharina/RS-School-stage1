@@ -70,5 +70,12 @@ p {
 .med-diff {}
 .hard-diff {}
 
+.rounds {
+  width: auto;
+  gap: 1rem;
+}
+
+.num {}
+
   background-color: #ffffff;
 }
