@@ -96,6 +96,7 @@ for (let i = 0; i < 10; i++) {
   let k = document.createElement("button");
   k.classList.add("key-btn");
   k.setAttribute("id", i);
+  k.textContent = i;
   numKeys.appendChild(k);
 }
 
@@ -107,6 +108,7 @@ for (let i = 0; i < 26; i++) {
   k.classList.add("key-btn");
   const id = 65 + i;
   k.setAttribute("id", id);
+  k.textContent = String.fromCharCode(id);
   strKeys.appendChild(k);
 }
 
