@@ -115,6 +115,15 @@ strKeys.classList.add("hid");
 virtKeyboard.appendChild(numKeys);
 virtKeyboard.appendChild(strKeys);
 
+// Fill the Section with content
+
+section.appendChild(menu);
+section.appendChild(diff);
+section.appendChild(roundsDiv);
+section.appendChild(alertDiv);
+section.appendChild(displayField);
+section.appendChild(virtKeyboard);
+
 
 function loadBody() {
   document.body.appendChild(h1);
