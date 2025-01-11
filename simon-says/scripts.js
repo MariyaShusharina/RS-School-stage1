@@ -84,6 +84,37 @@ alertDiv.textContent = "No alert";
 let displayField = document.createElement("div");
 displayField.classList.add("field");
 
+// Virtual Keyboard
+
+let virtKeyboard = document.createElement("div");
+virtKeyboard.classList.add("keyboard");
+
+let numKeys = document.createElement("div");
+numKeys.classList.add("numbers");
+
+for (let i = 0; i < 10; i++) {
+  let k = document.createElement("button");
+  k.classList.add("key-btn");
+  k.setAttribute("id", i);
+  numKeys.appendChild(k);
+}
+
+let strKeys = document.createElement("div");
+strKeys.classList.add("letters");
+
+for (let i = 0; i < 26; i++) {
+  let k = document.createElement("button");
+  k.classList.add("key-btn");
+  const id = 65 + i;
+  k.setAttribute("id", id);
+  strKeys.appendChild(k);
+}
+
+strKeys.classList.add("hid");
+
+virtKeyboard.appendChild(numKeys);
+virtKeyboard.appendChild(strKeys);
+
 
 function loadBody() {
   document.body.appendChild(h1);
