@@ -142,4 +142,27 @@ function loadBody() {
   document.body.appendChild(section);
 }
 
+function startGame() {}
+
+function newGamre() {}
+
+function showSequence() {}
+
+function repeatSequence() {
+  showSequence();
+  document.querySelector("repeat-btn").setAttribute("disabled", true);
+}
+
+function nextRound() {}
+
+function easyMode() {}
+
+function medMode() {}
+
+function hardMode() {}
+
+function checkLetter(id) {
+
+}
+
 window.onload = loadBody();
