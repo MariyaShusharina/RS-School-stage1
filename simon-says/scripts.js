@@ -15,22 +15,22 @@ menu.classList.add("menu");
 
 let startButton = document.createElement("button");
 startButton.textContent = "Start";
-startButton.classList.add = "start-btn";
+startButton.classList.add("start-btn");
 
 let newGameButton = document.createElement("button");
 newGameButton.textContent = "New Game";
-newGameButton.classList.add = "new-game-btn";
-newGameButton.classList.add = "hid";
+newGameButton.classList.add("new-game-btn");
+newGameButton.classList.add("hid");
 
 let repeatButton = document.createElement("button");
 repeatButton.textContent = "Repeat the Sequence";
-repeatButton.classList.add = "repeat-btn";
-repeatButton.classList.add = "hid";
+repeatButton.classList.add("repeat-btn");
+repeatButton.classList.add("hid");
 
 let nextButton = document.createElement("button");
 nextButton.textContent = "Next";
-nextButton.classList.add = "next-btn";
-nextButton.classList.add = "hid";
+nextButton.classList.add("next-btn");
+nextButton.classList.add("hid");
 
 menu.appendChild(startButton);
 menu.appendChild(newGameButton);
