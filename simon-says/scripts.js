@@ -79,6 +79,11 @@ let alertDiv = document.createElement("div");
 alertDiv.classList.add("alert");
 alertDiv.textContent = "No alert";
 
+// Display Field
+
+let displayField = document.createElement("div");
+displayField.classList.add("field");
+
 
 function loadBody() {
   document.body.appendChild(h1);
