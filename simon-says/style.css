@@ -57,14 +57,18 @@ p {
 
 /* Named Styles */
 
-.menu {}
+.menu {
+  flex-wrap: wrap;
+}
 
 .start-btn {}
 .new-game-btn {}
 .repeat-btn {}
 .next-btn {}
 
-.difficulty {}
+.difficulty {
+  flex-wrap: wrap;
+}
 
 .easy-diff {}
 .med-diff {}
@@ -116,9 +120,13 @@ p {
   flex-direction: column;
 }
 
-.numbers {}
+.numbers {
+  flex-wrap: wrap;
+}
 
-.letters {}
+.letters {
+  flex-wrap: wrap;
+}
 
 .key-btn {
   padding: 0;
