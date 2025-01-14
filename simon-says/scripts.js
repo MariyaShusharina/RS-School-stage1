@@ -2,7 +2,9 @@
 /* Variables */
 
 let mode = 0;
-let word = '';
+let word = [];
+let round = 0;
+let wordLength = 2;
 
 /* Generation of Page Content */
 
@@ -152,11 +154,60 @@ function loadBody() {
   document.body.appendChild(section);
 }
 
-function startGame() {}
+function startGame() {
+
+  round = 1;
+  updateRound();
+
+  generateWord();
+
+  keyboardVisibility();
+
+  let wordStr = '';
+  for (let i = 0; i < word.length; i++) {
+    wordStr = wordStr.concat(String.fromCharCode(word[i]));
+  }
+  console.log(wordStr);
+
+  document.querySelector(".start-btn").setAttribute("disabled", true);
+  document.querySelector(".start-btn").classList.add("hid");
+  document.querySelector(".new-game-btn").classList.remove("hid");
+  document.querySelector(".repeat-btn").classList.remove("hid");
+
+  document.querySelector(".easy-diff").setAttribute("disabled", true);
+  document.querySelector(".med-diff").setAttribute("disabled", true);
+  document.querySelector(".hard-diff").setAttribute("disabled", true);
+  
+  showSequence();
+}
 
 function newGame() {}
 
-function showSequence() {}
+function showSequence() {
+  let arrKeys = [];
+
+  for (let i = 0; i < wordLength; i++) {
+    arrKeys[i] = document.getElementById(word[i]);
+    // arrKeys[i].focus();
+  }
+
+  function showing() {
+    arrKeys.forEach((key) => {
+      key.focus();
+      wait(400);
+    });
+  }
+  // const interval = setInterval(showing, 400);
+
+  showing();
+  /*
+  function clearIntvl() {
+    clearInterval(interval);
+    interval = null;
+  }
+  const timeout = setTimeout(clearIntvl, 400 * arrKeys.length);
+  */
+}
 
 function repeatSequence() {
   showSequence();
@@ -165,14 +216,148 @@ function repeatSequence() {
 
 function nextRound() {}
 
-function easyMode() {}
+function easyMode() {
+  mode = 0;
 
-function medMode() {}
+  const easy = document.querySelector(".easy-diff");
+  easy.classList.add("active-diff");
+  easy.setAttribute("disabled", true);
 
-function hardMode() {}
+  const med = document.querySelector(".med-diff");
+  if (med.classList.contains("active-diff")) {
+    med.classList.remove("active-diff");
+  }
+  med.setAttribute("disabled", false);
+
+  const hard = document.querySelector(".hard-diff");
+  if (hard.classList.contains("active-diff")) {
+    hard.classList.remove("active-diff");
+  }
+  hard.setAttribute("disabled", false);
+}
+
+function medMode() {
+  mode = 1;
+
+  const med = document.querySelector(".med-diff");
+  med.classList.add("active-diff");
+  med.setAttribute("disabled", true);
+
+  const easy = document.querySelector(".easy-diff");
+  if (easy.classList.contains("active-diff")) {
+    easy.classList.remove("active-diff");
+  }
+  easy.setAttribute("disabled", false);
+
+  const hard = document.querySelector(".hard-diff");
+  if (hard.classList.contains("active-diff")) {
+    hard.classList.remove("active-diff");
+  }
+  hard.setAttribute("disabled", false);
+}
+
+function hardMode() {
+  mode = 2;
+
+  const hard = document.querySelector(".hard-diff");
+  hard.classList.add("active-diff");
+  hard.setAttribute("disabled", true);
+
+  const med = document.querySelector(".med-diff");
+  if (med.classList.contains("active-diff")) {
+    med.classList.remove("active-diff");
+  }
+  med.setAttribute("disabled", false);
+
+  const easy = document.querySelector(".easy-diff");
+  if (easy.classList.contains("active-diff")) {
+    easy.classList.remove("active-diff");
+  }
+  easy.setAttribute("disabled", false);
+}
 
 function checkLetter(id) {
 
+}
+
+function generateWord() {
+  wordLength = round * 2;
+  word = [];
+
+  if (mode === 0) {
+    for (let i = 0; i < wordLength; i++) {
+      let symb = Math.floor(Math.random * 10);
+      symb = symb + 48;
+      word[i] = symb;
+    }
+  }
+
+  if (mode === 1) {
+    for (let i = 0; i < wordLength; i++) {
+      let symb = Math.floor(Math.random * 26);
+      symb = symb + 65;
+      word[i] = symb;
+    }
+  }
+
+  if (mode === 2) {
+    for (let i = 0; i < wordLength; i++) {
+      let symb = Math.floor(Math.random * 36);
+
+      if (symb < 10) {
+       symb = symb + 48;
+      } else {
+        symb = symb + 65;
+      }
+
+      word[i] = symb;
+    }
+  }
+}
+
+function keyboardVisibility() {
+  const numBoard = document.querySelector(".numbers");
+  const letBoard = document.querySelector(".letters");
+
+  switch (mode) {
+    case 0:
+      if (numBoard.classList.contains("hid")) {
+        numBoard.classList.remove("hid");
+      }
+      if (!letBoard.classList.contains("hid")) {
+        letBoard.classList.add("hid");
+      }
+      break;
+    case 1:
+      if (!numBoard.classList.contains("hid")) {
+        numBoard.classList.add("hid");
+      }
+      if (letBoard.classList.contains("hid")) {
+        letBoard.classList.remove("hid");
+      }
+      break;
+    case 2:
+      if (numBoard.classList.contains("hid")) {
+        numBoard.classList.remove("hid");
+      }
+      if (letBoard.classList.contains("hid")) {
+        letBoard.classList.remove("hid");
+      }
+      break;
+    default:
+      if (numBoard.classList.contains("hid")) {
+        numBoard.classList.remove("hid");
+      }
+      if (!letBoard.classList.contains("hid")) {
+        letBoard.classList.add("hid");
+      }
+      break;
+  }
+}
+
+function updateRound() {
+  const roundPlace = document.querySelector(".num");
+  roundPlace.textContent = round;
 }
 
 window.onload = loadBody();
