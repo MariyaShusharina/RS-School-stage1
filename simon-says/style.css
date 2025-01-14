@@ -152,7 +152,14 @@ p {
   transition: all 0.4s;
 }
 
-.key-btn:hover, .key-btn:focus {
+.key-btn:hover {
+  background-color: rgba(0, 187, 119, 0.2);
+  border-color: rgba(0, 119, 85, 1);
+  filter: drop-shadow(0 0 0.5rem #00bb77);
+  outline: none;
+}
+
+.key-btn-show {
   background-color: rgba(0, 187, 119, 0.2);
   border-color: rgba(0, 119, 85, 1);
   filter: drop-shadow(0 0 0.5rem #00bb77);
