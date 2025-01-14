@@ -40,11 +40,13 @@ section {
 button {
   padding: 0.5rem 1rem;
 
-  border: none;
+  border: 1px solid rgba(0, 119, 85, 1);
   border-radius: 0.5rem;
 
-  background-color: #007755;
-  color: #ffffff;
+  background-color: rgba(0, 119, 85, 1);
+  color: rgba(255, 255, 255, 1);
+
+  transition: all 0.4s;
 }
 
 p {
@@ -73,6 +75,12 @@ p {
 .easy-diff {}
 .med-diff {}
 .hard-diff {}
+
+.active-diff {
+  background-color: rgba(0, 119, 85, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 119, 85, 0.3);
+}
 
 .rounds {
   width: auto;
@@ -144,8 +152,9 @@ p {
   transition: all 0.4s;
 }
 
-.key-btn:hover {
+.key-btn:hover, .key-btn:focus {
   background-color: rgba(0, 187, 119, 0.2);
   border-color: rgba(0, 119, 85, 1);
   filter: drop-shadow(0 0 0.5rem #00bb77);
+  outline: none;
 }
