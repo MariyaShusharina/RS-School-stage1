@@ -294,23 +294,23 @@ function generateWord() {
 
   if (mode === 0) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random * 10);
+      let symb = Math.floor(Math.random() * 10);
       symb = symb + 48;
-      word[i] = symb;
+      word.push(symb);
     }
   }
 
   if (mode === 1) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random * 26);
+      let symb = Math.floor(Math.random() * 26);
       symb = symb + 65;
-      word[i] = symb;
+      word.push(symb);
     }
   }
 
   if (mode === 2) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random * 36);
+      let symb = Math.floor(Math.random() * 36);
 
       if (symb < 10) {
        symb = symb + 48;
@@ -318,7 +318,7 @@ function generateWord() {
         symb = symb + 65;
       }
 
-      word[i] = symb;
+      word.push(symb);
     }
   }
 }
