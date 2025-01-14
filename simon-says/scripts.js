@@ -58,6 +58,7 @@ diff.classList.add("difficulty");
 let easyBtn = document.createElement("button");
 easyBtn.textContent = "Easy";
 easyBtn.classList.add("easy-diff");
+easyBtn.classList.add("active-diff");
 easyBtn.addEventListener("click", easyMode);
 
 let medBtn = document.createElement("button");
@@ -167,7 +168,8 @@ function startGame() {
   for (let i = 0; i < word.length; i++) {
     wordStr = wordStr.concat(String.fromCharCode(word[i]));
   }
-  console.log(wordStr);
+  console.log("Word: " + wordStr);
+  console.log("Chars of word: " + word);
 
   document.querySelector(".start-btn").setAttribute("disabled", true);
   document.querySelector(".start-btn").classList.add("hid");
@@ -192,9 +194,14 @@ function showSequence() {
   }
 
   function showing() {
-    arrKeys.forEach((key) => {
-      key.focus();
-      wait(400);
+    let interval = 500;
+    arrKeys.forEach(function (keyBtn, index) {
+      setTimeout(function () {
+        keyBtn.classList.add("key-btn-show");
+          setTimeout(function () {
+            keyBtn.classList.remove("key-btn-show");
+        }, (index + 1) * interval);
+      }, index * interval);
     });
   }
   // const interval = setInterval(showing, 400);
@@ -212,6 +219,7 @@ function showSequence() {
 function repeatSequence() {
   showSequence();
   document.querySelector(".repeat-btn").setAttribute("disabled", true);
+  document.querySelector(".repeat-btn").classList.add("active-diff");
 }
 
 function nextRound() {}
@@ -227,13 +235,13 @@ function easyMode() {
   if (med.classList.contains("active-diff")) {
     med.classList.remove("active-diff");
   }
-  med.setAttribute("disabled", false);
+  med.removeAttribute("disabled");
 
   const hard = document.querySelector(".hard-diff");
   if (hard.classList.contains("active-diff")) {
     hard.classList.remove("active-diff");
   }
-  hard.setAttribute("disabled", false);
+  hard.removeAttribute("disabled");
 }
 
 function medMode() {
@@ -247,13 +255,13 @@ function medMode() {
   if (easy.classList.contains("active-diff")) {
     easy.classList.remove("active-diff");
   }
-  easy.setAttribute("disabled", false);
+  easy.removeAttribute("disabled");
 
   const hard = document.querySelector(".hard-diff");
   if (hard.classList.contains("active-diff")) {
     hard.classList.remove("active-diff");
   }
-  hard.setAttribute("disabled", false);
+  hard.removeAttribute("disabled");
 }
 
 function hardMode() {
@@ -267,13 +275,13 @@ function hardMode() {
   if (med.classList.contains("active-diff")) {
     med.classList.remove("active-diff");
   }
-  med.setAttribute("disabled", false);
+  med.removeAttribute("disabled");
 
   const easy = document.querySelector(".easy-diff");
   if (easy.classList.contains("active-diff")) {
     easy.classList.remove("active-diff");
   }
-  easy.setAttribute("disabled", false);
+  easy.removeAttribute("disabled");
 }
 
 function checkLetter(id) {
