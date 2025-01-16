@@ -300,7 +300,7 @@ function generateWord() {
 
   if (mode === 0) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random() * 10);
+      let symb = Math.floor(Math.random() * 9.99);
       symb = symb + 48;
       word.push(symb);
     }
@@ -308,7 +308,7 @@ function generateWord() {
 
   if (mode === 1) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random() * 26);
+      let symb = Math.floor(Math.random() * 25.99);
       symb = symb + 65;
       word.push(symb);
     }
@@ -316,12 +316,12 @@ function generateWord() {
 
   if (mode === 2) {
     for (let i = 0; i < wordLength; i++) {
-      let symb = Math.floor(Math.random() * 36);
+      let symb = Math.floor(Math.random() * 35.99);
 
       if (symb < 10) {
-       symb = symb + 48;
+        symb = symb + 48;
       } else {
-        symb = symb + 65;
+        symb = symb + 55;
       }
 
       word.push(symb);
