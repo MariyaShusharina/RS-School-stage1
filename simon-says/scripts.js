@@ -258,6 +258,7 @@ function showSequence() {
   }
 
   document.querySelector(".overlay").classList.remove("hid");
+  physicalKeyboardOff();
 
   function showing() {
     let interval = 800;
@@ -299,14 +300,20 @@ function showSequence() {
 
 function repeatSequence() {
   showSequence();
+
+  userIndex = 0;
+  
   document.querySelector(".repeat-btn").setAttribute("disabled", true);
   document.querySelector(".repeat-btn").classList.add("active-diff");
+
   if (document.querySelector(".alert").classList.contains("fail")) {
     document.querySelector(".alert").classList.remove("fail");
   }
   if (document.querySelector(".alert").classList.contains("done")) {
     document.querySelector(".alert").classList.remove("done");
   }
+
+  document.querySelector(".field").textContent = '';
 }
 
 function nextRound() {
@@ -505,6 +512,9 @@ function winGame() {
   alert.textContent = "Congratulations! You won!";
 
   document.querySelector(".next-btn").classList.add("hid");
+
+  physicalKeyboardOff();
+  document.querySelector(".overlay-keys").classList.remove("hid");
 }
 
 function gameOver() {
@@ -529,7 +539,7 @@ const addCheckKey = function (k) {
 
 function checkKey(k) {
   // console.log(k.key);
-  let keybtn = k.key.toUpperCase();
+  let keybtn = String.fromCharCode(k.keyCode).toUpperCase();
 
   switch (mode) {
     case 0:
@@ -539,10 +549,10 @@ function checkKey(k) {
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
+          userIndex += 1;
         } else {
           mistake();
         }
-        userIndex += 1;
         if (userIndex >= wordLength) {
           correctAnswer();
         }
@@ -555,10 +565,10 @@ function checkKey(k) {
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
+          userIndex += 1;
         } else {
           mistake();
         }
-        userIndex += 1;
         if (userIndex >= wordLength) {
           correctAnswer();
         }
@@ -571,10 +581,10 @@ function checkKey(k) {
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
+          userIndex += 1;
         } else {
           mistake();
         }
-        userIndex += 1;
         if (userIndex >= wordLength) {
           correctAnswer();
         }
@@ -587,10 +597,10 @@ function checkKey(k) {
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
+          userIndex += 1;
         } else {
           mistake();
         }
-        userIndex += 1;
         if (userIndex >= wordLength) {
           correctAnswer();
         }
