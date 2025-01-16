@@ -2,9 +2,12 @@
 /* Variables */
 
 let mode = 0;
+let round = 1;
+
 let word = [];
-let round = 0;
 let wordLength = 2;
+
+let userIndex = 0;
 
 /* Generation of Page Content */
 
