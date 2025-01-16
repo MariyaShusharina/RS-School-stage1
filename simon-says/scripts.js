@@ -286,6 +286,12 @@ function repeatSequence() {
   showSequence();
   document.querySelector(".repeat-btn").setAttribute("disabled", true);
   document.querySelector(".repeat-btn").classList.add("active-diff");
+  if (document.querySelector(".alert").classList.contains("fail")) {
+    document.querySelector(".alert").classList.remove("fail");
+  }
+  if (document.querySelector(".alert").classList.contains("done")) {
+    document.querySelector(".alert").classList.remove("done");
+  }
 }
 
 function nextRound() {}
