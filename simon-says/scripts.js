@@ -137,6 +137,13 @@ strKeys.classList.add("hid");
 virtKeyboard.appendChild(numKeys);
 virtKeyboard.appendChild(strKeys);
 
+// Overlay
+
+let overlay = document.createElement("div");
+overlay.classList.add("overlay");
+overlay.classList.add("hid");
+overlay.textContent = "\u00a0";
+
 // Fill the Section with content
 
 section.appendChild(menu);
@@ -145,6 +152,7 @@ section.appendChild(roundsDiv);
 section.appendChild(alertDiv);
 section.appendChild(displayField);
 section.appendChild(virtKeyboard);
+section.appendChild(overlay);
 
 
 /* Functionality */
