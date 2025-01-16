@@ -137,8 +137,14 @@ for (let i = 0; i < 26; i++) {
 
 strKeys.classList.add("hid");
 
+let overlayKeys = document.createElement("div");
+overlayKeys.classList.add("overlay-keys");
+overlayKeys.classList.add("hid");
+overlayKeys.textContent = "\u00a0";
+
 virtKeyboard.appendChild(numKeys);
 virtKeyboard.appendChild(strKeys);
+virtKeyboard.appendChild(overlayKeys);
 
 // Overlay
 
@@ -169,6 +175,9 @@ function loadBody() {
 function startGame() {
 
   // round = 1;
+  
+  document.querySelector(".overlay-keys").classList.add("hid");
+
   updateRound();
 
   userIndex = 0;
@@ -501,7 +510,9 @@ function winGame() {
 function gameOver() {
   document.querySelector(".repeat-btn").classList.add("hid");
   document.querySelector(".new-game-btn").classList.remove("hid");
+
   physicalKeyboardOff();
+  document.querySelector(".overlay-keys").classList.remove("hid");
 }
 
 function physicalKeyboardOn() {
@@ -608,7 +619,10 @@ function mistake() {
     document.querySelector(".field").textContent = '';
     alert.classList.add("fail");
     alert.textContent = "Mistake. Try again.";
+
     physicalKeyboardOff();
+    document.querySelector(".overlay-keys").classList.remove("hid");
+
     userIndex = 0;
   }
 }
