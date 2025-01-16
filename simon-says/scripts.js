@@ -375,7 +375,30 @@ function hardMode() {
 }
 
 function checkLetter(id) {
+  if (id === word[userIndex]) {
+    const span = document.createElement("span");
+    span.textContent = String.fromCharCode(id);
+    document.querySelector(".field").appendChild(span);
+  } else {
+    const alert = document.querySelector(".alert");
+    if (document.querySelector(".repeat-btn").hasAttribute("disabled")) {
+      document.querySelector(".field").textContent = '';
+      alert.classList.add("fail");
+      alert.textContent = "Mistake. Game Over.";
+      gameOver();
+    } else {
+      document.querySelector(".field").textContent = '';
+      alert.classList.add("fail");
+      alert.textContent = "Mistake. Try again.";
+      userIndex = 0;
+    }
+  }
 
+  userIndex += 1;
+
+  if (userIndex >= wordLength) {
+    correctAnswer();
+  }
 }
 
 function generateWord() {
