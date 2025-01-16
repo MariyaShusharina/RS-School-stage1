@@ -239,7 +239,7 @@ function newGame() {
 
 function showSequence() {
 
-  physicalKeyboardOff();
+  // physicalKeyboardOff();
 
   let arrKeys = [];
 
@@ -385,22 +385,10 @@ function checkLetter(id) {
     const span = document.createElement("span");
     span.textContent = String.fromCharCode(id);
     document.querySelector(".field").appendChild(span);
+    userIndex += 1;
   } else {
-    const alert = document.querySelector(".alert");
-    if (document.querySelector(".repeat-btn").hasAttribute("disabled")) {
-      document.querySelector(".field").textContent = '';
-      alert.classList.add("fail");
-      alert.textContent = "Mistake. Game Over.";
-      gameOver();
-    } else {
-      document.querySelector(".field").textContent = '';
-      alert.classList.add("fail");
-      alert.textContent = "Mistake. Try again.";
-      userIndex = 0;
-    }
+    mistake();
   }
-
-  userIndex += 1;
 
   if (userIndex >= wordLength) {
     correctAnswer();
@@ -529,34 +517,70 @@ const addCheckKey = function (k) {
 }
 
 function checkKey(k) {
-  console.log(k.key);
+  // console.log(k.key);
   let keybtn = k.key.toUpperCase();
 
-  if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58 || 64 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 91) {
-    if (keybtn.charCodeAt(0) === word[userIndex]) {
-      const span = document.createElement("span");
-      span.textContent = keybtn;
-      document.querySelector(".field").appendChild(span);
-    } else {
-      const alert = document.querySelector(".alert");
-      if (document.querySelector(".repeat-btn").hasAttribute("disabled")) {
-        document.querySelector(".field").textContent = '';
-        alert.classList.add("fail");
-        alert.textContent = "Mistake. Game Over.";
-        gameOver();
-      } else {
-        document.querySelector(".field").textContent = '';
-        alert.classList.add("fail");
-        alert.textContent = "Mistake. Try again.";
-        userIndex = 0;
+  switch (mode) {
+    case 0:
+      if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58) {
+        if (keybtn.charCodeAt(0) === word[userIndex]) {
+          const span = document.createElement("span");
+          span.textContent = keybtn;
+          document.querySelector(".field").appendChild(span);
+        } else {
+          mistake();
+        }
+        userIndex += 1;
+        if (userIndex >= wordLength) {
+          correctAnswer();
+        }
       }
-    }
-
-    userIndex += 1;
-
-    if (userIndex >= wordLength) {
-      correctAnswer();
-    }
+      break;
+    case 1:
+      if (64 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 91) {
+        if (keybtn.charCodeAt(0) === word[userIndex]) {
+          const span = document.createElement("span");
+          span.textContent = keybtn;
+          document.querySelector(".field").appendChild(span);
+        } else {
+          mistake();
+        }
+        userIndex += 1;
+        if (userIndex >= wordLength) {
+          correctAnswer();
+        }
+      }
+      break;
+    case 2:
+      if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58 || 64 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 91) {
+        if (keybtn.charCodeAt(0) === word[userIndex]) {
+          const span = document.createElement("span");
+          span.textContent = keybtn;
+          document.querySelector(".field").appendChild(span);
+        } else {
+          mistake();
+        }
+        userIndex += 1;
+        if (userIndex >= wordLength) {
+          correctAnswer();
+        }
+      }
+      break;
+    default:
+      if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58) {
+        if (keybtn.charCodeAt(0) === word[userIndex]) {
+          const span = document.createElement("span");
+          span.textContent = keybtn;
+          document.querySelector(".field").appendChild(span);
+        } else {
+          mistake();
+        }
+        userIndex += 1;
+        if (userIndex >= wordLength) {
+          correctAnswer();
+        }
+      }
+      break;
   }
 
   const keyBtn = document.getElementById(keybtn.charCodeAt(0));
@@ -571,6 +595,22 @@ function checkKey(k) {
   setTimeout(function () {
     physicalKeyboardOn();
   }, 350);
+}
+
+function mistake() {
+  const alert = document.querySelector(".alert");
+  if (document.querySelector(".repeat-btn").hasAttribute("disabled")) {
+    document.querySelector(".field").textContent = '';
+    alert.classList.add("fail");
+    alert.textContent = "Mistake. Game Over.";
+    gameOver();
+  } else {
+    document.querySelector(".field").textContent = '';
+    alert.classList.add("fail");
+    alert.textContent = "Mistake. Try again.";
+    physicalKeyboardOff();
+    userIndex = 0;
+  }
 }
 
 window.onload = loadBody();
