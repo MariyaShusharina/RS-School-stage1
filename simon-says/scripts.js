@@ -207,6 +207,7 @@ function startGame() {
 
 function newGame() {
   round = 1;
+  userIndex = 0;
 
   const roundPlace = document.querySelector(".num");
   roundPlace.textContent = '-';
@@ -215,8 +216,9 @@ function newGame() {
   document.querySelector(".start-btn").classList.remove("hid");
 
   document.querySelector(".new-game-btn").classList.add("hid");
-  
+
   document.querySelector(".repeat-btn").removeAttribute("disabled");
+  document.querySelector(".repeat-btn").classList.remove("active-diff");
   document.querySelector(".repeat-btn").classList.add("hid");
 
   document.querySelector(".easy-diff").removeAttribute("disabled");
@@ -224,6 +226,13 @@ function newGame() {
   document.querySelector(".hard-diff").removeAttribute("disabled");
 
   document.querySelector(".field").textContent = '';
+
+  if (document.querySelector(".alert").classList.contains("fail")) {
+    document.querySelector(".alert").classList.remove("fail");
+  }
+  if (document.querySelector(".alert").classList.contains("done")) {
+    document.querySelector(".alert").classList.remove("done");
+  }
 }
 
 function showSequence() {
