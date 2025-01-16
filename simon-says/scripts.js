@@ -242,6 +242,8 @@ function easyMode() {
     hard.classList.remove("active-diff");
   }
   hard.removeAttribute("disabled");
+
+  keyboardVisibility();
 }
 
 function medMode() {
@@ -262,6 +264,8 @@ function medMode() {
     hard.classList.remove("active-diff");
   }
   hard.removeAttribute("disabled");
+
+  keyboardVisibility();
 }
 
 function hardMode() {
@@ -282,6 +286,8 @@ function hardMode() {
     easy.classList.remove("active-diff");
   }
   easy.removeAttribute("disabled");
+
+  keyboardVisibility();
 }
 
 function checkLetter(id) {
