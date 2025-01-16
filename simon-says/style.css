@@ -124,6 +124,7 @@ p {
 }
 
 .keyboard {
+  max-width: 750px;
   width: 95%;
   flex-direction: column;
 }
