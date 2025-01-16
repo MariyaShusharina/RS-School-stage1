@@ -168,12 +168,14 @@ function loadBody() {
 
 function startGame() {
 
-  round = 1;
+  // round = 1;
   updateRound();
+
+  userIndex = 0;
 
   generateWord();
 
-  keyboardVisibility();
+  // keyboardVisibility();
 
   let wordStr = '';
   for (let i = 0; i < word.length; i++) {
@@ -186,10 +188,19 @@ function startGame() {
   document.querySelector(".start-btn").classList.add("hid");
   document.querySelector(".new-game-btn").classList.remove("hid");
   document.querySelector(".repeat-btn").classList.remove("hid");
+  document.querySelector(".repeat-btn").classList.remove("active-diff");
+  document.querySelector(".repeat-btn").removeAttribute("disabled");
 
   document.querySelector(".easy-diff").setAttribute("disabled", true);
   document.querySelector(".med-diff").setAttribute("disabled", true);
   document.querySelector(".hard-diff").setAttribute("disabled", true);
+
+  if (document.querySelector(".alert").classList.contains("fail")) {
+    document.querySelector(".alert").classList.remove("fail");
+  }
+  if (document.querySelector(".alert").classList.contains("done")) {
+    document.querySelector(".alert").classList.remove("done");
+  }
   
   showSequence();
 }
