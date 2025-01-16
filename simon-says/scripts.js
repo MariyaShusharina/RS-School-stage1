@@ -191,7 +191,10 @@ function newGame() {
 
   document.querySelector(".start-btn").removeAttribute("disabled");
   document.querySelector(".start-btn").classList.remove("hid");
+
   document.querySelector(".new-game-btn").classList.add("hid");
+  
+  document.querySelector(".repeat-btn").removeAttribute("disabled");
   document.querySelector(".repeat-btn").classList.add("hid");
 
   document.querySelector(".easy-diff").removeAttribute("disabled");
