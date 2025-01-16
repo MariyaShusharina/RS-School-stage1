@@ -175,7 +175,7 @@ function loadBody() {
 function startGame() {
 
   // round = 1;
-  
+
   document.querySelector(".overlay-keys").classList.add("hid");
 
   updateRound();
@@ -535,6 +535,7 @@ function checkKey(k) {
     case 0:
       if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58) {
         if (keybtn.charCodeAt(0) === word[userIndex]) {
+          showButton();
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
@@ -550,6 +551,7 @@ function checkKey(k) {
     case 1:
       if (64 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 91) {
         if (keybtn.charCodeAt(0) === word[userIndex]) {
+          showButton();
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
@@ -565,6 +567,7 @@ function checkKey(k) {
     case 2:
       if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58 || 64 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 91) {
         if (keybtn.charCodeAt(0) === word[userIndex]) {
+          showButton();
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
@@ -580,6 +583,7 @@ function checkKey(k) {
     default:
       if (47 < keybtn.charCodeAt(0) && keybtn.charCodeAt(0) < 58) {
         if (keybtn.charCodeAt(0) === word[userIndex]) {
+          showButton();
           const span = document.createElement("span");
           span.textContent = keybtn;
           document.querySelector(".field").appendChild(span);
@@ -594,12 +598,16 @@ function checkKey(k) {
       break;
   }
 
-  const keyBtn = document.getElementById(keybtn.charCodeAt(0));
-  keyBtn.classList.add("key-btn-show");
+  // console.log(keybtn);
 
-  setTimeout(function () {
-    keyBtn.classList.remove("key-btn-show");
-  }, 300);
+  function showButton() {
+    const keyBtn = document.getElementById(keybtn.charCodeAt(0));
+    keyBtn.classList.add("key-btn-show");
+
+    setTimeout(function () {
+      keyBtn.classList.remove("key-btn-show");
+    }, 300);
+  }
 
   physicalKeyboardOff();
 
