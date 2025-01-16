@@ -243,15 +243,20 @@ function showSequence() {
     // arrKeys[i].focus();
   }
 
+  document.querySelector(".overlay").classList.remove("hid");
+
   function showing() {
-    let interval = 500;
+    let interval = 800;
+
     arrKeys.forEach(function (keyBtn, index) {
       setTimeout(function () {
         keyBtn.classList.add("key-btn-show");
-          setTimeout(function () {
-            keyBtn.classList.remove("key-btn-show");
-        }, (index + 1) * interval);
       }, index * interval);
+    });
+    arrKeys.forEach(function (keyBtn, index) {
+      setTimeout(function () {
+        keyBtn.classList.remove("key-btn-show");
+      }, index * interval + 500);
     });
   }
   // const interval = setInterval(showing, 400);
@@ -264,6 +269,17 @@ function showSequence() {
   }
   const timeout = setTimeout(clearIntvl, 400 * arrKeys.length);
   */
+
+  function overlay() {
+    let intervalOverlay = 800 * wordLength + 500;
+    const ovLay = document.querySelector(".overlay");
+
+    setTimeout(function () {
+      ovLay.classList.add("hid");
+    }, intervalOverlay);
+  }
+
+  overlay();
 }
 
 function repeatSequence() {
