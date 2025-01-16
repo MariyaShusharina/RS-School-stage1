@@ -481,4 +481,32 @@ function updateRound() {
   roundPlace.textContent = round;
 }
 
+function correctAnswer() {
+  const alert = document.querySelector(".alert");
+
+  alert.classList.add("done");
+  alert.textContent = "Good job!";
+
+  document.querySelector(".repeat-btn").classList.add("hid");
+  document.querySelector(".next-btn").classList.remove("hid");
+
+  if (round >= 5) {
+    winGame();
+  }
+}
+
+function winGame() {
+  const alert = document.querySelector(".alert");
+
+  alert.classList.add("done");
+  alert.textContent = "Congratulations! You won!";
+
+  document.querySelector(".next-btn").classList.add("hid");
+}
+
+function gameOver() {
+  document.querySelector(".repeat-btn").classList.add("hid");
+  document.querySelector(".new-game-btn").classList.remove("hid");
+}
+
 window.onload = loadBody();
