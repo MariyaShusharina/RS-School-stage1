@@ -294,7 +294,19 @@ function repeatSequence() {
   }
 }
 
-function nextRound() {}
+function nextRound() {
+  round += 1;
+
+  document.querySelector(".repeat-btn").classList.remove("hid");
+  document.querySelector(".repeat-btn").classList.remove("active-diff");
+  document.querySelector(".repeat-btn").removeAttribute("disabled");
+
+  document.querySelector(".next-btn").classList.add("hid");
+
+  document.querySelector(".field").textContent = '';
+
+  startGame();
+}
 
 function easyMode() {
   mode = 0;
