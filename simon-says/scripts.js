@@ -183,7 +183,23 @@ function startGame() {
   showSequence();
 }
 
-function newGame() {}
+function newGame() {
+  round = 1;
+
+  const roundPlace = document.querySelector(".num");
+  roundPlace.textContent = '-';
+
+  document.querySelector(".start-btn").removeAttribute("disabled");
+  document.querySelector(".start-btn").classList.remove("hid");
+  document.querySelector(".new-game-btn").classList.add("hid");
+  document.querySelector(".repeat-btn").classList.add("hid");
+
+  document.querySelector(".easy-diff").removeAttribute("disabled");
+  document.querySelector(".med-diff").removeAttribute("disabled");
+  document.querySelector(".hard-diff").removeAttribute("disabled");
+
+  document.querySelector(".field").textContent = '';
+}
 
 function showSequence() {
   let arrKeys = [];
