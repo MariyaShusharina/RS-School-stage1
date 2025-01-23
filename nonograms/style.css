@@ -1,0 +1,43 @@
+
+/* General styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+
+  margin: 0;
+  padding: 0 0 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: #fafafa;
+
+  font-family: Arial, sans-serif;
+}
+
+section, div {
+  width: 100%;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+section {
+  position: relative;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
