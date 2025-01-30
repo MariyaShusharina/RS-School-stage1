@@ -192,22 +192,8 @@ newGameButton.classList.add("new-game-btn");
 newGameButton.classList.add("hid");
 newGameButton.addEventListener("click", newGame);
 
-let repeatButton = document.createElement("button");
-repeatButton.textContent = "Repeat the Sequence";
-repeatButton.classList.add("repeat-btn");
-repeatButton.classList.add("hid");
-//repeatButton.addEventListener("click", repeatSequence);
-
-let nextButton = document.createElement("button");
-nextButton.textContent = "Next";
-nextButton.classList.add("next-btn");
-nextButton.classList.add("hid");
-nextButton.addEventListener("click", nextRound);
-
 menu.appendChild(startButton);
 menu.appendChild(newGameButton);
-menu.appendChild(repeatButton);
-menu.appendChild(nextButton);
 
 // Difficulty menu
 
@@ -234,20 +220,8 @@ diff.appendChild(easyBtn);
 diff.appendChild(medBtn);
 diff.appendChild(hardBtn);
 
-// Rounds
 
-let roundsDiv = document.createElement("div");
-roundsDiv.classList.add("rounds");
 
-let roundPar = document.createElement("p");
-roundPar.textContent = "Round: ";
-
-let roundNum = document.createElement("p");
-roundNum.textContent = "-";
-roundNum.classList.add("num");
-
-roundsDiv.appendChild(roundPar);
-roundsDiv.appendChild(roundNum);
 
 // Alert Div
 
@@ -264,7 +238,6 @@ displayField.classList.add("field");
 
 section.appendChild(menu);
 section.appendChild(diff);
-section.appendChild(roundsDiv);
 section.appendChild(alertDiv);
 section.appendChild(displayField);
 
@@ -278,7 +251,6 @@ function loadBody() {
 
 function startGame() {}
 function newGame() {}
-function nextRound() {}
 
 function easyMode() {}
 function medMode() {}
