@@ -394,6 +394,48 @@ timerDiv.appendChild(min);
 timerDiv.appendChild(dots);
 timerDiv.appendChild(sec);
 
+// Games
+
+let easyGames = document.createElement("div");
+easyGames.classList.add("hid");
+easyGames.classList.add("easy-games");
+
+for (let i = easyStart; i < easyEnd; i++) {
+  let levelBtn = document.createElement("button");
+  levelBtn.textContent = levels[i].name;
+  levelBtn.value = i;
+  addEventListener("click", loadNonogram);
+  easyGames.appendChild(levelBtn);
+}
+
+let medGames = document.createElement("div");
+medGames.classList.add("hid");
+medGames.classList.add("med-games");
+
+for (let i = medStart; i < medEnd; i++) {
+  let levelBtn = document.createElement("button");
+  levelBtn.textContent = levels[i].name;
+  levelBtn.value = i;
+  addEventListener("click", loadNonogram);
+  medGames.appendChild(levelBtn);
+}
+
+let hardGames = document.createElement("div");
+hardGames.classList.add("hid");
+hardGames.classList.add("hard-games");
+
+for (let i = hardStart; i < hardEnd; i++) {
+  let levelBtn = document.createElement("button");
+  levelBtn.textContent = levels[i].name;
+  levelBtn.value = i;
+  addEventListener("click", loadNonogram);
+  hardGames.appendChild(levelBtn);
+}
+
+// Nonogram Div
+
+let nonogramDiv = document.createElement("div");
+nonogramDiv.classList.add("nonogram-div");
 
 // Fill the Section with content
 
