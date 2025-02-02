@@ -89,3 +89,7 @@ button:disabled {
 .med-games {}
 .hard-games {}
 
+.timer-div { gap: 0.25rem; }
+.min-span {}
+.sec-span {}
+
