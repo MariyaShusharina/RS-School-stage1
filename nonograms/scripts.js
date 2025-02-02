@@ -454,6 +454,8 @@ section.appendChild(nonogramDiv);
 function loadBody() {
   document.body.appendChild(h1);
   document.body.appendChild(section);
+  showNonogram();
+}
 
 function startGame() {
   timer();
