@@ -415,4 +415,23 @@ function easyMode() {}
 function medMode() {}
 function hardMode() {}
 
+function timer() {
+  let startTime = Date.now();
+  let mins = 0;
+  let seconds = 0;
+
+  function calculate() {
+    let currentTime = Date.now();
+    let time = Math.floor((currentTime - startTime) / 1000);
+
+    seconds = Math.floor(time % 60);
+    mins = Math.floor(time / 60);
+
+    if (seconds < 10) { seconds = `0${seconds}`; }
+  }
+
+  const interval = setInterval(calculate, 1000);
+}
+
+
 window.onload = loadBody();
