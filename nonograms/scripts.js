@@ -441,6 +441,12 @@ nonogramDiv.classList.add("nonogram-div");
 
 section.appendChild(menu);
 section.appendChild(diff);
+section.appendChild(easyGames);
+section.appendChild(medGames);
+section.appendChild(hardGames);
+section.appendChild(h2);
+section.appendChild(timerDiv);
+section.appendChild(nonogramDiv);
 
 
 /* Functionality */
