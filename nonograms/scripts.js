@@ -374,9 +374,25 @@ diff.appendChild(hardBtn);
 let h2 = document.createElement("h2");
 h2.textContent = levels[0].name;
 
+// Timer
 
+let timerDiv = document.createElement("div");
+timerDiv.classList.add("timer-div");
 
+let min = document.createElement("span");
+min.classList.add("min-span");
+min.textContent = "0";
 
+let dots = document.createElement("span");
+dots.textContent = " : ";
+
+let sec = document.createElement("span");
+sec.classList.add("sec-span");
+sec.textContent = "0";
+
+timerDiv.appendChild(min);
+timerDiv.appendChild(dots);
+timerDiv.appendChild(sec);
 
 
 // Fill the Section with content
