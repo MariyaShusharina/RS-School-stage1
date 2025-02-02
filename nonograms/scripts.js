@@ -1,9 +1,21 @@
 /* Variables */
 
 let mode = 0;
+let j = 0;
 
 
 /* Levels */
+
+let levels = [];
+
+let easyStart = 0;
+let easyEnd = 5;
+
+let medStart = 5;
+let medEnd = 10;
+
+let hardStart = 10;
+let hardEnd = 15;
 
 // Easy levels
 
