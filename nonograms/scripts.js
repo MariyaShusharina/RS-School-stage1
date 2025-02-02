@@ -375,23 +375,14 @@ let h2 = document.createElement("h2");
 h2.textContent = levels[0].name;
 
 
-// Alert Div
 
-let alertDiv = document.createElement("div");
-alertDiv.classList.add("alert");
-alertDiv.textContent = "No alert";
 
-// Display Field
 
-let displayField = document.createElement("div");
-displayField.classList.add("field");
 
 // Fill the Section with content
 
 section.appendChild(menu);
 section.appendChild(diff);
-section.appendChild(alertDiv);
-section.appendChild(displayField);
 
 
 /* Functionality */
