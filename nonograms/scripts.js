@@ -454,9 +454,11 @@ section.appendChild(nonogramDiv);
 function loadBody() {
   document.body.appendChild(h1);
   document.body.appendChild(section);
+
+function startGame() {
+  timer();
 }
 
-function startGame() {}
 function newGame() {}
 
 function easyMode() {
