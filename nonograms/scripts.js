@@ -369,7 +369,10 @@ diff.appendChild(easyBtn);
 diff.appendChild(medBtn);
 diff.appendChild(hardBtn);
 
+// Display name
 
+let h2 = document.createElement("h2");
+h2.textContent = levels[0].name;
 
 
 // Alert Div
