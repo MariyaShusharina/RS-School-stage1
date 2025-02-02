@@ -661,5 +661,15 @@ function timer() {
   const interval = setInterval(calculate, 1000);
 }
 
+function toggleCell(ev) {
+  targ = ev.currentTarget;
+
+  if (targ.classList.contains("checked")) {
+    targ.classList.remove("checked");
+  } else {
+    targ.classList.add("checked");
+  }
+}
+
 
 window.onload = loadBody();
