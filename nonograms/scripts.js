@@ -533,6 +533,113 @@ function hardMode() {
   medGames.classList.add("hid");
 }
 
+function showNonogram() {
+  const a = 5 + 5 * mode;
+
+  let nonogram = document.createElement("div");
+  nonogram.classList.add("grid-around");
+
+  let blank = document.createElement("div");
+  blank.textContent = "\u00a0";
+  nonogram.appendChild(blank);
+
+  // Top row numbers
+
+  let topNums = document.createElement("div");
+  for (let k = 0; k < a; k++) {
+    let cell = document.createElement("div");
+    cell.classList.add("top-num");
+
+    let arr = [];
+    //let isOne = true;
+
+    for(let m = 0; m < a; m++) {
+      /* if (levels[j].win[k][m] === 0) {
+        isOne = false;
+      } */
+      if (levels[j].win[k][m] === 1 && (arr.length === 0 || levels[j].win[k][m-1] === 0)) {
+        arr.push(1);
+      } else if (levels[j].win[k][m] === 1 && arr.length !== 0 && levels[j].win[k][m-1] === 1) {
+        arr[m] += 1;
+      }
+    }
+
+    for (let n = 0; n < arr.length; n++) {
+      let numSpan = document.createElement("span");
+      numSpan.textContent = arr[n];
+      cell.appendChild(numSpan);
+    }
+
+    topNums.appendChild(cell);
+  }
+  nonogram.appendChild(topNums);
+
+  // Left column numbers
+
+  let leftNums = document.createElement("div");
+  leftNums.classList.add("left-col");
+  for (let k = 0; k < a; k++) {
+    let cell = document.createElement("div");
+    cell.classList.add("left-num");
+
+    let arr = [];
+
+    for(let m = 0; m < a; m++) {
+      if (levels[j].win[m][k] === 1 && (arr.length === 0 || levels[j].win[m-1][k] === 0)) {
+        arr.push(1);
+      }
+      if (levels[j].win[m][k] === 1 && arr.length !== 0 && levels[j].win[m-1][k] === 1) {
+        arr[m] += 1;
+      }
+    }
+
+    for (let n = 0; n < arr.length; n++) {
+      let numSpan = document.createElement("span");
+      numSpan.textContent = arr[n];
+      cell.appendChild(numSpan);
+    }
+
+    leftNums.appendChild(cell);
+  }
+  nonogram.appendChild(leftNums);
+
+  // Grid (nonogram)
+
+  let grid = document.createElement("div");
+  if (mode === 0){ 
+    grid.classList.add("grid-easy");
+  }
+  if (mode === 1){ 
+    grid.classList.add("grid-med");
+  }
+  if (mode === 2){ 
+    grid.classList.add("grid-hard");
+  }
+  for (let k = 0; k < a; k++) {
+    for (let m = 0; m < a; m++) {
+      let cell = document.createElement("button");
+      cell.classList.add("cell");
+      cell.value = [m, k];
+      cell.addEventListener("click", toggleCell);
+      grid.appendChild(cell);
+    }
+  }
+  nonogram.appendChild(grid);
+
+  nonogramDiv.appendChild(nonogram);
+}
+
+function loadNonogram(event) {
+  j = event.currentTarget.value;
+
+  nonogramDiv.textContent = "";
+
+  easyGames.classList.add("hid");
+  medGames.classList.add("hid");
+  hardGames.classList.add("hid");
+
+  showNonogram();
+}
 
 function timer() {
   let startTime = Date.now();
