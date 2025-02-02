@@ -63,3 +63,25 @@ button:disabled {
 .hid {
   display: none;
 }
+
+/* Named Styles */
+
+.start-btn {}
+.new-game-btn {}
+
+.difficulty {
+  flex-wrap: wrap;
+}
+
+.easy-diff {}
+.med-diff {}
+.hard-diff {}
+
+.active-diff {
+  background-color: rgba(0, 119, 85, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 119, 85, 0.3);
+
+  cursor: default;
+}
+
