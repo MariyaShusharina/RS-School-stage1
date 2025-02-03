@@ -3,6 +3,8 @@
 let mode = 0;
 let j = 0;
 
+let interval;
+
 
 /* Levels */
 
@@ -676,7 +678,7 @@ function timer() {
     min.textContent = mins;
   }
 
-  const interval = setInterval(calculate, 1000);
+  interval = setInterval(calculate, 1000);
 }
 
 function toggleCell(ev) {
