@@ -653,6 +653,8 @@ function loadNonogram(event) {
   medGames.classList.add("hid");
   hardGames.classList.add("hid");
 
+  h2.textContent = levels[j].name;
+
   showNonogram();
 }
 
