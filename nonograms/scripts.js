@@ -572,6 +572,9 @@ function showNonogram() {
       cell.appendChild(numSpan);
     }
 
+    let nullSpan = document.createElement("span");
+    cell.appendChild(nullSpan);
+
     topNums.appendChild(cell);
   }
   nonogram.appendChild(topNums);
@@ -600,6 +603,9 @@ function showNonogram() {
       numSpan.textContent = arr[n];
       cell.appendChild(numSpan);
     }
+
+    let nullSpan = document.createElement("span");
+    cell.appendChild(nullSpan);
 
     leftNums.appendChild(cell);
   }
