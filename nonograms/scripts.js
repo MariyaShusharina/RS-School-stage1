@@ -553,16 +553,18 @@ function showNonogram() {
     cell.classList.add("top-num");
 
     let arr = [];
-    //let isOne = true;
+    let isOne = false;
 
     for(let m = 0; m < a; m++) {
-      /* if (levels[j].win[k][m] === 0) {
+      if (levels[j].win[k][m] === 0) {
         isOne = false;
-      } */
-      if (levels[j].win[k][m] === 1 && (arr.length === 0 || levels[j].win[k][m-1] === 0)) {
+      }
+      if (levels[j].win[k][m] === 1 && (arr.length === 0 || !isOne)) {
         arr.push(1);
-      } else if (levels[j].win[k][m] === 1 && arr.length !== 0 && levels[j].win[k][m-1] === 1) {
-        arr[m] += 1;
+        isOne = true;
+      } else if (levels[j].win[k][m] === 1 && arr.length !== 0 && isOne) {
+        arr[arr.length-1] += 1;
+        isOne = true;
       }
     }
 
@@ -588,13 +590,19 @@ function showNonogram() {
     cell.classList.add("left-num");
 
     let arr = [];
+    let isOne = false;
 
     for(let m = 0; m < a; m++) {
-      if (levels[j].win[m][k] === 1 && (arr.length === 0 || levels[j].win[m-1][k] === 0)) {
-        arr.push(1);
+      if (levels[j].win[m][k] === 0) {
+        isOne = false;
       }
-      if (levels[j].win[m][k] === 1 && arr.length !== 0 && levels[j].win[m-1][k] === 1) {
-        arr[m] += 1;
+      if (levels[j].win[m][k] === 1 && (arr.length === 0 || !isOne)) {
+        arr.push(1);
+        isOne = true;
+      }
+      if (levels[j].win[m][k] === 1 && arr.length !== 0 && isOne) {
+        arr[arr.length-1] += 1;
+        isOne = true;
       }
     }
 
