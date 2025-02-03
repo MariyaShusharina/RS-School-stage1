@@ -671,6 +671,9 @@ function timer() {
     mins = Math.floor(time / 60);
 
     if (seconds < 10) { seconds = `0${seconds}`; }
+
+    sec.textContent = seconds;
+    min.textContent = mins;
   }
 
   const interval = setInterval(calculate, 1000);
