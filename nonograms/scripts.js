@@ -404,7 +404,7 @@ for (let i = easyStart; i < easyEnd; i++) {
   let levelBtn = document.createElement("button");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
-  addEventListener("click", loadNonogram);
+  levelBtn.addEventListener("click", loadNonogram);
   easyGames.appendChild(levelBtn);
 }
 
@@ -416,7 +416,7 @@ for (let i = medStart; i < medEnd; i++) {
   let levelBtn = document.createElement("button");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
-  addEventListener("click", loadNonogram);
+  levelBtn.addEventListener("click", loadNonogram);
   medGames.appendChild(levelBtn);
 }
 
@@ -428,7 +428,7 @@ for (let i = hardStart; i < hardEnd; i++) {
   let levelBtn = document.createElement("button");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
-  addEventListener("click", loadNonogram);
+  levelBtn.addEventListener("click", loadNonogram);
   hardGames.appendChild(levelBtn);
 }
 
