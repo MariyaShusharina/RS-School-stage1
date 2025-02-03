@@ -556,13 +556,13 @@ function showNonogram() {
     let isOne = false;
 
     for(let m = 0; m < a; m++) {
-      if (levels[j].win[k][m] === 0) {
+      if (levels[j].win[m][k] === 0) {
         isOne = false;
       }
-      if (levels[j].win[k][m] === 1 && (arr.length === 0 || !isOne)) {
+      if (levels[j].win[m][k] === 1 && (arr.length === 0 || !isOne)) {
         arr.push(1);
         isOne = true;
-      } else if (levels[j].win[k][m] === 1 && arr.length !== 0 && isOne) {
+      } else if (levels[j].win[m][k] === 1 && arr.length !== 0 && isOne) {
         arr[arr.length-1] += 1;
         isOne = true;
       }
@@ -593,14 +593,13 @@ function showNonogram() {
     let isOne = false;
 
     for(let m = 0; m < a; m++) {
-      if (levels[j].win[m][k] === 0) {
+      if (levels[j].win[k][m] === 0) {
         isOne = false;
       }
-      if (levels[j].win[m][k] === 1 && (arr.length === 0 || !isOne)) {
+      if (levels[j].win[k][m] === 1 && (arr.length === 0 || !isOne)) {
         arr.push(1);
         isOne = true;
-      }
-      if (levels[j].win[m][k] === 1 && arr.length !== 0 && isOne) {
+      } else if (levels[j].win[k][m] === 1 && arr.length !== 0 && isOne) {
         arr[arr.length-1] += 1;
         isOne = true;
       }
