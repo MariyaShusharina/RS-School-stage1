@@ -473,7 +473,34 @@ function startGame() {
   restartButton.classList.remove("hid");
 }
 
-function newGame() {}
+function restartGame() {
+  clearInterval(interval);
+
+  sec.textContent = 0;
+  min.textContent = 0;
+
+  nonogramDiv.textContent = "";
+
+  easyGames.classList.add("hid");
+  medGames.classList.add("hid");
+  hardGames.classList.add("hid");
+
+  if (mode === 0) {
+    easyBtn.classList.add("active-diff");
+    medBtn.classList.remove("active-diff");
+    hardBtn.classList.remove("active-diff");
+  } else if (mode === 1) {
+    medBtn.classList.add("active-diff");
+    easyBtn.classList.remove("active-diff");
+    hardBtn.classList.remove("active-diff");
+  } else if (mode === 2) {
+    hardBtn.classList.add("active-diff");
+    medBtn.classList.remove("active-diff");
+    easyBtn.classList.remove("active-diff");
+  }
+
+  showNonogram();
+}
 
 function easyMode() {
   mode = 0;
