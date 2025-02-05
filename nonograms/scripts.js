@@ -673,6 +673,11 @@ function showNonogram() {
 }
 
 function loadNonogram(event) {
+  clearInterval(interval);
+
+  sec.textContent = 0;
+  min.textContent = 0;
+
   j = event.currentTarget.value;
 
   nonogramDiv.textContent = "";
