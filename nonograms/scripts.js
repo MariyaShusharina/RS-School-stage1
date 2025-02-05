@@ -404,6 +404,7 @@ easyGames.classList.add("easy-games");
 
 for (let i = easyStart; i < easyEnd; i++) {
   let levelBtn = document.createElement("button");
+  levelBtn.classList.add("level-btn");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
   levelBtn.addEventListener("click", loadNonogram);
@@ -416,6 +417,7 @@ medGames.classList.add("med-games");
 
 for (let i = medStart; i < medEnd; i++) {
   let levelBtn = document.createElement("button");
+  levelBtn.classList.add("level-btn");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
   levelBtn.addEventListener("click", loadNonogram);
@@ -428,6 +430,7 @@ hardGames.classList.add("hard-games");
 
 for (let i = hardStart; i < hardEnd; i++) {
   let levelBtn = document.createElement("button");
+  levelBtn.classList.add("level-btn");
   levelBtn.textContent = levels[i].name;
   levelBtn.value = i;
   levelBtn.addEventListener("click", loadNonogram);
