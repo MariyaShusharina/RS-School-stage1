@@ -463,7 +463,14 @@ function loadBody() {
 }
 
 function startGame() {
+  clearInterval(interval);
+
+  let grid = document.querySelector(".grid-easy") || document.querySelector(".grid-med") || document.querySelector(".grid-hard");
+  grid.removeEventListener("click", startGame);
+
   timer();
+
+  restartButton.classList.remove("hid");
 }
 
 function newGame() {}
