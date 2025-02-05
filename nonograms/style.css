@@ -85,9 +85,14 @@ button:disabled {
   cursor: default;
 }
 
-.easy-games {}
-.med-games {}
-.hard-games {}
+.easy-games, .med-games, .hard-games {
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  background-color: rgba(50, 108, 120, 1);
+  border-color: rgba(50, 108, 120, 1);;
+}
 
 .timer-div { gap: 0.25rem; }
 .min-span {}
@@ -174,4 +179,9 @@ button:disabled {
 
 .checked {
   background-color: rgba(0, 0, 0, 1);
+}
+
+.grid-hard > .cell {
+  width: 1.2rem;
+  height: 1.2rem;
 }
