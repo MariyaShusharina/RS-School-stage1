@@ -722,6 +722,10 @@ function toggleCell(ev) {
   }
 }
 
+function endGame() {
+  // code here
+}
+
 function randomGame() {
   clearInterval(interval);
 
