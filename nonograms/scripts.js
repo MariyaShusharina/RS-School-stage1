@@ -560,6 +560,8 @@ function hardMode() {
 }
 
 function showNonogram() {
+  mode = levels[j].difficulty;
+
   const a = 5 + 5 * mode;
 
   let nonogram = document.createElement("div");
