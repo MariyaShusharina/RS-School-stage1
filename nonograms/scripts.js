@@ -503,23 +503,18 @@ function restartGame() {
 }
 
 function easyMode() {
-  mode = 0;
-
   const easy = document.querySelector(".easy-diff");
   easy.classList.add("active-diff");
-  easy.setAttribute("disabled", true);
 
   const med = document.querySelector(".med-diff");
   if (med.classList.contains("active-diff")) {
     med.classList.remove("active-diff");
   }
-  med.removeAttribute("disabled");
 
   const hard = document.querySelector(".hard-diff");
   if (hard.classList.contains("active-diff")) {
     hard.classList.remove("active-diff");
   }
-  hard.removeAttribute("disabled");
 
   easyGames.classList.remove("hid");
   medGames.classList.add("hid");
@@ -527,23 +522,18 @@ function easyMode() {
 }
 
 function medMode() {
-  mode = 1;
-
   const med = document.querySelector(".med-diff");
   med.classList.add("active-diff");
-  med.setAttribute("disabled", true);
 
   const easy = document.querySelector(".easy-diff");
   if (easy.classList.contains("active-diff")) {
     easy.classList.remove("active-diff");
   }
-  easy.removeAttribute("disabled");
-
+  
   const hard = document.querySelector(".hard-diff");
   if (hard.classList.contains("active-diff")) {
     hard.classList.remove("active-diff");
   }
-  hard.removeAttribute("disabled");
 
   medGames.classList.remove("hid");
   easyGames.classList.add("hid");
@@ -551,23 +541,18 @@ function medMode() {
 }
 
 function hardMode() {
-  mode = 2;
-
   const hard = document.querySelector(".hard-diff");
   hard.classList.add("active-diff");
-  hard.setAttribute("disabled", true);
 
   const med = document.querySelector(".med-diff");
   if (med.classList.contains("active-diff")) {
     med.classList.remove("active-diff");
   }
-  med.removeAttribute("disabled");
 
   const easy = document.querySelector(".easy-diff");
   if (easy.classList.contains("active-diff")) {
     easy.classList.remove("active-diff");
   }
-  easy.removeAttribute("disabled");
 
   hardGames.classList.remove("hid");
   easyGames.classList.add("hid");
