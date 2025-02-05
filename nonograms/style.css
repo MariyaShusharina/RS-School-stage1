@@ -66,8 +66,8 @@ button:disabled {
 
 /* Named Styles */
 
-.start-btn {}
-.new-game-btn {}
+.random-btn {}
+.restart-btn {}
 
 .difficulty {
   flex-wrap: wrap;
@@ -81,8 +81,6 @@ button:disabled {
   background-color: rgba(0, 119, 85, 0.2);
   color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 119, 85, 0.3);
-
-  cursor: default;
 }
 
 .easy-games, .med-games, .hard-games {
