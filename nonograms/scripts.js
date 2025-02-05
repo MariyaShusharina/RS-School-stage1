@@ -332,19 +332,19 @@ let section = document.createElement("section");
 let menu = document.createElement("div");
 menu.classList.add("menu");
 
-let startButton = document.createElement("button");
-startButton.textContent = "Start";
-startButton.classList.add("start-btn");
-startButton.addEventListener("click", startGame);
+let randButton = document.createElement("button");
+randButton.textContent = "Random Level";
+randButton.classList.add("random-btn");
+randButton.addEventListener("click", randomGame);
 
-let newGameButton = document.createElement("button");
-newGameButton.textContent = "New Game";
-newGameButton.classList.add("new-game-btn");
-newGameButton.classList.add("hid");
-newGameButton.addEventListener("click", newGame);
+let restartButton = document.createElement("button");
+restartButton.textContent = "Restart";
+restartButton.classList.add("restart-btn");
+restartButton.classList.add("hid");
+restartButton.addEventListener("click", restartGame);
 
-menu.appendChild(startButton);
-menu.appendChild(newGameButton);
+menu.appendChild(randButton);
+menu.appendChild(restartButton);
 
 // Difficulty menu
 
