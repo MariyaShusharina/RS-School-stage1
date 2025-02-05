@@ -665,6 +665,8 @@ function showNonogram() {
       grid.appendChild(cell);
     }
   }
+  grid.addEventListener("click", startGame);
+
   nonogram.appendChild(grid);
 
   nonogramDiv.appendChild(nonogram);
