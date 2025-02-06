@@ -798,6 +798,9 @@ function showNonogram() {
   nonogram.appendChild(grid);
 
   nonogramDiv.appendChild(nonogram);
+
+  saveButton.removeAttribute("disabled");
+  solveButton.removeAttribute("disabled");
 }
 
 function loadNonogram(event) {
@@ -1001,7 +1004,27 @@ function toggleTheme() {
 }
 
 function solveGame() {
+  window.removeEventListener("click", toggleCell);
 
+  let a = 5 + 5 * mode;
+
+  const cells = Array.from(document.getElementsByClassName("cell"));
+  let arr = [];
+  arr = JSON.parse(JSON.stringify(levels[j].win));
+
+  let n = 0;
+
+  for (let k = 0; k < a; k++) {
+    for(let m = 0; m < a; m++) {
+      if (arr[k][m] === 1) {
+        cells[n].classList.add("checked");
+      }
+      n++;
+    }
+  }
+
+  saveButton.setAttribute("disabled", true);
+  solveButton.setAttribute("disabled", true);
 }
 
 function toggleSounds() {}
