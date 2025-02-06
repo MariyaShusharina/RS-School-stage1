@@ -819,8 +819,15 @@ function toggleTheme() {
   }
 }
 
+function solveGame() {
 
 }
+
+function toggleSounds() {}
+
+function saveGame() {}
+
+function loadGame() {}
 
 
 window.onload = loadBody();
