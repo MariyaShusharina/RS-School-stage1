@@ -9,17 +9,6 @@ let interval;
 
 let isLight = true;
 
-let gridDiv;
-let gridAround;
-
-let leftNums;
-let topNums;
-
-let btns;
-let lvlBtns;
-let cells;
-
-
 /* Levels */
 
 let levels = [];
@@ -538,8 +527,6 @@ function restartGame() {
   }
 
   showNonogram();
-  
-  selectGrid();
 }
 
 function easyMode() {
@@ -729,8 +716,6 @@ function loadNonogram(event) {
   h2.textContent = levels[j].name;
 
   showNonogram();
-  
-  selectGrid();
 }
 
 function timer() {
@@ -834,15 +819,7 @@ function toggleTheme() {
   }
 }
 
-function selectGrid() {
-  gridAround = document.querySelector(".grid-around");
 
-  leftNums = Array.from(document.getElementsByClassName("left-num"));
-  topNums = Array.from(document.getElementsByClassName("top-num"));
-
-  btns = Array.from(document.querySelectorAll("button:not(.cell)"));
-  lvlBtns = Array.from(document.getElementsByClassName("level-btn"));
-  cells = Array.from(document.getElementsByClassName("cell"));
 }
 
 
