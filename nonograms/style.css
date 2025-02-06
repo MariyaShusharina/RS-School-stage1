@@ -2,8 +2,17 @@
 /* General styles */
 
 html:root {
-  --active-color: rgba(0, 0, 0, 0.7);
+  --btn-border: rgba(0, 119, 85, 1);
+  --btn-bg: rgba(0, 119, 85, 1);
+
+  --active-color: rgba(0, 0, 0, 1);
   --active-bg: rgba(0, 119, 85, 0.2);
+
+  --bord-color: rgba(0, 0, 0, 1);
+  --cell-bg: rgba(250, 250, 250, 1);
+
+  --level-bg: rgba(50, 108, 120, 1);
+  --level-border: rgba(50, 108, 120, 1);
 }
 
 html {
@@ -22,7 +31,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 1);
 
   font-family: Arial, sans-serif;
 }
@@ -50,10 +59,10 @@ p, h2 {
 button {
   padding: 0.5rem 1rem;
 
-  border: 1px solid rgba(0, 119, 85, 1);
+  border: 1px solid var(--btn-border);
   border-radius: 0.5rem;
 
-  background-color: rgba(0, 119, 85, 1);
+  background-color: var(--btn-bg);
   color: rgba(255, 255, 255, 1);
 
   transition: all 0.4s;
@@ -103,8 +112,8 @@ button:disabled {
 }
 
 .level-btn {
-  background-color: rgba(50, 108, 120, 1);
-  border-color: rgba(50, 108, 120, 1);;
+  background-color: var(--level-bg);
+  border-color: var(--level-border);
 }
 
 .timer-div { gap: 0.25rem; }
@@ -125,7 +134,7 @@ button:disabled {
 .grid-around > div {
   width: 100%;
   height: 100%;
-  border: 2px solid #000000;
+  border: 2px solid var(--bord-color);
   gap: 0;
 }
 
@@ -140,14 +149,14 @@ button:disabled {
   height: 100%;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px solid #000000;
+  border: 1px solid var(--bord-color);
   gap: 0.2rem;
 }
 .left-num {
   width: 100%;
   height: 100%;
   justify-content: flex-end;
-  border: 1px solid #000000;
+  border: 1px solid var(--bord-color);
   gap: 0.8rem;
 }
 
@@ -175,11 +184,11 @@ button:disabled {
   height: 2rem;
   padding: 0.1rem;
 
-  outline: 1px solid #000000;
-  border: 1px solid #000000;
+  outline: 1px solid var(--bord-color);
+  border: 1px solid var(--bord-color);
   border-radius: 0;
 
-  background-color: rgba(250, 250, 250, 1);
+  background-color: var(--cell-bg);
 
   transition: all 0.2s;
 
