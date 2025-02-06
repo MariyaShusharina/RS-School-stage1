@@ -853,6 +853,61 @@ function toggleCell(ev) {
   } else {
     targ.classList.add("checked");
   }
+
+  checkWin();
+}
+
+function checkWin() {
+  let a = 5 + 5 * mode;
+
+  const cells = Array.from(document.getElementsByClassName("cell"));
+  let arr = [];
+  let innerArr = [];
+
+  for (let i = 0; i < a; i++) {
+    innerArr.push(0);
+  }
+
+  for (let i = 0; i < a; i++) {
+    let temp = JSON.parse(JSON.stringify(innerArr));
+    arr.push(temp);
+  }
+
+  let n = 0;
+
+  for (let k = 0; k < a; k++) {
+    for(let m = 0; m < a; m++) {
+      if (cells[n].classList.contains("checked")) {
+        arr[k][m] = 1;
+      }
+      n++;
+    }
+  }
+
+  let isWin = 1;
+
+  for (let k = 0; k < a; k++) {
+    for(let m = 0; m < a; m++) {
+      if (levels[j].win[k][m] !== arr[k][m]) {
+        isWin *= 0;
+      }
+    }
+  }
+
+  if (isWin) {
+    winGame();
+  }
+}
+
+function winGame() {
+  console.log("WIN");
+  clearInterval(interval);
+
+  alertSpan.textContent = `Congratulations!\nYou solved puzzle in ${timeRemain} seconds!`;
+
+  updateRecords();
+
+  alertWrap.classList.remove("hid");
 }
 
 function endGame() {
