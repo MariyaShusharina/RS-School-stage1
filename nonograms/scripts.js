@@ -910,8 +910,36 @@ function winGame() {
   alertWrap.classList.remove("hid");
 }
 
-function endGame() {
-  // code here
+function updateRecords() {
+  let diff = "";
+
+  if (secondsWin < 10) { secondsWin = `0${secondsWin}`; }
+
+  let winTime = `${minutsWin}:${secondsWin}`;
+
+  if (mode === 0) {
+    diff = "Easy";
+  } else if (mode === 1) {
+    diff = "Medium";
+  } else if (mode === 2) {
+    diff = "Hard";
+  }
+
+  let record = {
+    name: levels[j].name,
+    difficulty: diff,
+    time: winTime,
+    seconds: timeRemain
+  };
+
+  records = JSON.parse(localStorage.MariyaShusharinaNonograms);
+  records.unshift(record);
+  
+  if (records.length > 5) {
+    records.pop();
+  }
+
+  localStorage.MariyaShusharinaNonograms = JSON.stringify(records);
 }
 
 function randomGame() {
@@ -988,6 +1016,29 @@ function closeModal() {
 
 function closeAlert() {
   alertWrap.classList.add("hid");
+}
+
+function showRecords() {
+  records = JSON.parse(localStorage.MariyaShusharinaNonograms);
+
+  records.sort(function(c, d){ return c.seconds - d.seconds });
+
+  innerModal.textContent = "";
+
+  for (let i = 0; i < records.length; i++) {
+    let entry1 = document.createElement("span");
+    entry1.textContent = records[i].name;
+    let entry2 = document.createElement("span");
+    entry2.textContent = records[i].difficulty;
+    let entry3 = document.createElement("span");
+    entry3.textContent = records[i].time;
+
+    innerModal.appendChild(entry1);
+    innerModal.appendChild(entry2);
+    innerModal.appendChild(entry3);
+  }
+
+  wrap.classList.remove("hid");
 }
 
 
