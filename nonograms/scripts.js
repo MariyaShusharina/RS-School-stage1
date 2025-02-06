@@ -792,38 +792,19 @@ function randomGame() {
 }
 
 function toggleTheme() {
-  
-  selectGrid();
 
   if (isLight) {
     document.body.style.backgroundColor = "rgba(0, 85, 61, 1)";
     document.body.style.color = "rgba(250, 250, 250, 1)";
 
-    for(let child of gridAround.children) {
-      child.style.borderColor = "rgba(250, 250, 250, 1)";
-    }
+    root.style.setProperty("--btn-bg", "rgba(255, 250, 230, 0.3)");
+    root.style.setProperty("--btn-border", "transparent");
 
-    leftNums.forEach((num) => {
-      num.style.borderColor = "rgba(250, 250, 250, 1)";
-    });
-    topNums.forEach((num) => {
-      num.style.borderColor = "rgba(250, 250, 250, 1)";
-    });
+    root.style.setProperty("--level-bg", "rgba(169, 217, 255, 0.3)");
+    root.style.setProperty("--level-border", "transparent");
 
-    btns.forEach((btn) => {
-      btn.style.backgroundColor = "rgba(255, 250, 230, 0.3)";
-      btn.style.borderColor = "transparent";
-    });
-    lvlBtns.forEach((btn) => {
-      btn.style.backgroundColor = "rgba(169, 217, 255, 0.3)";
-      btn.style.borderColor = "transparent";
-    });
-
-    cells.forEach((cell) => {
-      cell.style.backgroundColor = "rgba(250, 250, 250, 0.35)";
-      cell.style.borderColor = "rgba(250, 250, 250, 1)";
-      cell.style.outline = "1px solid rgba(250, 250, 250, 1)";
-    });
+    root.style.setProperty("--cell-bg", "rgba(250, 250, 250, 0.35)");
+    root.style.setProperty("--bord-color", "rgba(250, 250, 250, 1)");
 
     root.style.setProperty("--active-color", "rgba(255, 255, 255, 0.7)");
     root.style.setProperty("--active-bg", "rgba(64, 167, 113, 0.25)");
@@ -833,7 +814,22 @@ function toggleTheme() {
     isLight = false;
   } else {
     document.body.style.backgroundColor = "rgba(250, 250, 250, 1)";
+    document.body.style.color = "rgba(0, 0, 0, 1)";
+
+    root.style.setProperty("--btn-bg", "rgba(0, 119, 85, 1)");
+    root.style.setProperty("--btn-border", "rgba(0, 119, 85, 1)");
+
+    root.style.setProperty("--level-bg", "rgba(50, 108, 120, 1)");
+    root.style.setProperty("--level-border", "rgba(50, 108, 120, 1)");
+
+    root.style.setProperty("--cell-bg", "rgba(250, 250, 250, 1)");
+    root.style.setProperty("--bord-color", "rgba(0, 0, 0, 1)");
+
+    root.style.setProperty("--active-color", "rgba(0, 0, 0, 0.7)");
+    root.style.setProperty("--active-bg", "rgba(0, 119, 85, 0.2)");
+
     themeButton.textContent = "\uD83C\uDF1E";
+
     isLight = true;
   }
 }
