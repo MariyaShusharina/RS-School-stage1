@@ -538,6 +538,8 @@ function restartGame() {
   }
 
   showNonogram();
+  
+  selectGrid();
 }
 
 function easyMode() {
@@ -727,6 +729,8 @@ function loadNonogram(event) {
   h2.textContent = levels[j].name;
 
   showNonogram();
+  
+  selectGrid();
 }
 
 function timer() {
@@ -783,18 +787,13 @@ function randomGame() {
   h2.textContent = levels[j].name;
 
   showNonogram();
+  
+  selectGrid();
 }
 
 function toggleTheme() {
   
-  gridAround = document.querySelector(".grid-around");
-
-  leftNums = Array.from(document.getElementsByClassName("left-num"));
-  topNums = Array.from(document.getElementsByClassName("top-num"));
-
-  btns = Array.from(document.querySelectorAll("button:not(.cell)"));
-  lvlBtns = Array.from(document.getElementsByClassName("level-btn"));
-  cells = Array.from(document.getElementsByClassName("cell"));
+  selectGrid();
 
   if (isLight) {
     document.body.style.backgroundColor = "rgba(0, 85, 61, 1)";
@@ -837,6 +836,17 @@ function toggleTheme() {
     themeButton.textContent = "\uD83C\uDF1E";
     isLight = true;
   }
+}
+
+function selectGrid() {
+  gridAround = document.querySelector(".grid-around");
+
+  leftNums = Array.from(document.getElementsByClassName("left-num"));
+  topNums = Array.from(document.getElementsByClassName("top-num"));
+
+  btns = Array.from(document.querySelectorAll("button:not(.cell)"));
+  lvlBtns = Array.from(document.getElementsByClassName("level-btn"));
+  cells = Array.from(document.getElementsByClassName("cell"));
 }
 
 
