@@ -483,6 +483,27 @@ for (let i = hardStart; i < hardEnd; i++) {
 let nonogramDiv = document.createElement("div");
 nonogramDiv.classList.add("nonogram-div");
 
+// Alert Div
+
+let alertWrap = document.createElement("div");
+alertWrap.classList.add("wrap");
+alertWrap.classList.add("hid");
+
+let alertModal = document.createElement("div");
+alertModal.classList.add("modal");
+
+let alertSpan = document.createElement("span");
+alertSpan.textContent = "Message";
+
+let closeBtnAlert = document.createElement("button");
+closeBtnAlert.textContent = "Close";
+closeBtnAlert.classList.add("close-btn");
+closeBtnAlert.addEventListener("click", closeAlert);
+
+alertModal.appendChild(alertSpan);
+alertModal.appendChild(closeBtnAlert);
+alertWrap.appendChild(alertModal);
+
 // Fill the Section with content
 
 section.appendChild(menu);
@@ -494,6 +515,7 @@ section.appendChild(hardGames);
 section.appendChild(h2);
 section.appendChild(timerDiv);
 section.appendChild(nonogramDiv);
+section.appendChild(alertWrap);
 
 
 /* Functionality */
@@ -837,6 +859,10 @@ function toggleSounds() {}
 function saveGame() {}
 
 function loadGame() {}
+
+function closeAlert() {
+  alertWrap.classList.add("hid");
+}
 
 
 window.onload = loadBody();
