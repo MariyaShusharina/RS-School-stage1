@@ -194,9 +194,15 @@ button:disabled {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
+@media screen and (max-width: 700px) {
+  .grid-hard > .cell {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
-.grid-hard > .cell {
-  width: 1.2rem;
-  height: 1.2rem;
+@media screen and (max-width: 510px) {
+  .left-num {
+    gap: 0.5rem;
+  }
 }
