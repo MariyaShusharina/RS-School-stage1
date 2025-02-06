@@ -1,9 +1,23 @@
 /* Variables */
 
+let root = document.querySelector(":root");
+
 let mode = 0;
 let j = 0;
 
 let interval;
+
+let isLight = true;
+
+let gridDiv;
+let gridAround;
+
+let leftNums;
+let topNums;
+
+let btns;
+let lvlBtns;
+let cells;
 
 
 /* Levels */
@@ -769,6 +783,60 @@ function randomGame() {
   h2.textContent = levels[j].name;
 
   showNonogram();
+}
+
+function toggleTheme() {
+  
+  gridAround = document.querySelector(".grid-around");
+
+  leftNums = Array.from(document.getElementsByClassName("left-num"));
+  topNums = Array.from(document.getElementsByClassName("top-num"));
+
+  btns = Array.from(document.querySelectorAll("button:not(.cell)"));
+  lvlBtns = Array.from(document.getElementsByClassName("level-btn"));
+  cells = Array.from(document.getElementsByClassName("cell"));
+
+  if (isLight) {
+    document.body.style.backgroundColor = "rgba(0, 85, 61, 1)";
+    document.body.style.color = "rgba(250, 250, 250, 1)";
+
+    for(let child of gridAround.children) {
+      child.style.borderColor = "rgba(250, 250, 250, 1)";
+    }
+
+    leftNums.forEach((num) => {
+      num.style.borderColor = "rgba(250, 250, 250, 1)";
+    });
+    topNums.forEach((num) => {
+      num.style.borderColor = "rgba(250, 250, 250, 1)";
+    });
+
+    btns.forEach((btn) => {
+      btn.style.backgroundColor = "rgba(255, 250, 230, 0.3)";
+      btn.style.borderColor = "transparent";
+    });
+    lvlBtns.forEach((btn) => {
+      btn.style.backgroundColor = "rgba(169, 217, 255, 0.3)";
+      btn.style.borderColor = "transparent";
+    });
+
+    cells.forEach((cell) => {
+      cell.style.backgroundColor = "rgba(250, 250, 250, 0.35)";
+      cell.style.borderColor = "rgba(250, 250, 250, 1)";
+      cell.style.outline = "1px solid rgba(250, 250, 250, 1)";
+    });
+
+    root.style.setProperty("--active-color", "rgba(255, 255, 255, 0.7)");
+    root.style.setProperty("--active-bg", "rgba(64, 167, 113, 0.25)");
+
+    themeButton.textContent = "\uD83C\uDF1B";
+
+    isLight = false;
+  } else {
+    document.body.style.backgroundColor = "rgba(250, 250, 250, 1)";
+    themeButton.textContent = "\uD83C\uDF1E";
+    isLight = true;
+  }
 }
 
 
