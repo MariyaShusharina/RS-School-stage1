@@ -66,8 +66,18 @@ button:disabled {
 
 /* Named Styles */
 
+.menu {}
+
 .random-btn {}
 .restart-btn {}
+.solve-btn {}
+
+.settings {}
+
+.theme-btn {
+  font-size: 1.1rem;
+  padding: 0.35rem;
+}
 
 .difficulty {
   flex-wrap: wrap;
