@@ -978,6 +978,8 @@ function toggleTheme() {
     root.style.setProperty("--active-color", "rgba(255, 255, 255, 0.7)");
     root.style.setProperty("--active-bg", "rgba(64, 167, 113, 0.25)");
 
+    root.style.setProperty("--modal-bg", "rgba(0, 85, 61, 1)");
+
     themeButton.textContent = "\uD83C\uDF1B";
 
     isLight = false;
@@ -996,6 +998,8 @@ function toggleTheme() {
 
     root.style.setProperty("--active-color", "rgba(0, 0, 0, 0.7)");
     root.style.setProperty("--active-bg", "rgba(0, 119, 85, 0.2)");
+
+    root.style.setProperty("--modal-bg", "rgba(250, 250, 250, 1)");
 
     themeButton.textContent = "\uD83C\uDF1E";
 
