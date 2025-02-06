@@ -360,17 +360,32 @@ menu.appendChild(solveButton);
 
 let settings = document.createElement("div");
 settings.classList.add("settings");
-//theme;
+
 let themeButton = document.createElement("button");
 themeButton.textContent = "\uD83C\uDF1E";
 themeButton.classList.add("theme-btn");
 themeButton.addEventListener("click", toggleTheme);
-//sound;
-//save;
-//loadsaved;
+
+let soundButton = document.createElement("button");
+soundButton.textContent = "\uD83D\uDD0A"; // \uD83D\uDD07
+soundButton.classList.add("sound-btn");
+soundButton.addEventListener("click", toggleSounds);
+
+let saveButton = document.createElement("button");
+saveButton.textContent = "Save Game";
+saveButton.classList.add("save-btn");
+saveButton.classList.add("hid");
+saveButton.addEventListener("click", saveGame);
+
+let loadButton = document.createElement("button");
+loadButton.textContent = "Load Game";
+loadButton.classList.add("load-btn");
+loadButton.addEventListener("click", loadGame);
 
 settings.appendChild(themeButton);
-
+settings.appendChild(soundButton);
+settings.appendChild(saveButton);
+settings.appendChild(loadButton);
 
 // Difficulty menu
 
