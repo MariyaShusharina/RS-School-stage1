@@ -771,10 +771,15 @@ function endGame() {
 }
 
 function randomGame() {
-  j = Math.floor(Math.random() * 15);
+  let temp = j;
+
+  while (temp === j) {
+    temp = Math.floor(Math.random() * 15);
+  }
+
+  j = temp;
 
   mode = levels[j].difficulty;
-  
   h2.textContent = levels[j].name;
 
   restartGame();
