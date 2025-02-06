@@ -513,6 +513,8 @@ function startGame() {
   timer();
 
   restartButton.classList.remove("hid");
+  solveButton.classList.remove("hid");
+  saveButton.classList.remove("hid");
 }
 
 function restartGame() {
