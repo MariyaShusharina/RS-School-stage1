@@ -109,7 +109,7 @@ button:disabled {
   border-color: rgba(0, 119, 85, 0.3);
 }
 
-.easy-games, .med-games, .hard-games {
+.easy-games, .med-games, .hard-games, .settings, .menu {
   flex-wrap: wrap;
 }
 
