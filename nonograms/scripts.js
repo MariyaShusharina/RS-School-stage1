@@ -483,6 +483,51 @@ for (let i = hardStart; i < hardEnd; i++) {
 let nonogramDiv = document.createElement("div");
 nonogramDiv.classList.add("nonogram-div");
 
+// Modal window
+
+let wrap = document.createElement("div");
+wrap.classList.add("wrap");
+wrap.classList.add("hid");
+
+let modal = document.createElement("div");
+modal.classList.add("modal");
+
+let heading = document.createElement("div");
+heading.classList.add("inner-modal");
+
+let span1 = document.createElement("span");
+span1.classList.add("bold");
+span1.textContent = "Puzzle";
+let span2 = document.createElement("span");
+span2.classList.add("bold");
+span2.textContent = "Difficulty";
+let span3 = document.createElement("span");
+span3.classList.add("bold");
+span3.textContent = "Time";
+
+heading.appendChild(span1);
+heading.appendChild(span2);
+heading.appendChild(span3);
+
+let innerModal = document.createElement("div");
+innerModal.classList.add("inner-modal");
+
+let span4 = document.createElement("span");
+span4.textContent = "(none)";
+innerModal.appendChild(span4);
+innerModal.appendChild(span4);
+innerModal.appendChild(span4);
+
+let closeBtn = document.createElement("button");
+closeBtn.textContent = "Close";
+closeBtn.classList.add("close-btn");
+closeBtn.addEventListener("click", closeModal);
+
+modal.appendChild(heading);
+modal.appendChild(innerModal);
+modal.appendChild(closeBtn);
+wrap.appendChild(modal);
+
 // Alert Div
 
 let alertWrap = document.createElement("div");
@@ -515,6 +560,7 @@ section.appendChild(hardGames);
 section.appendChild(h2);
 section.appendChild(timerDiv);
 section.appendChild(nonogramDiv);
+section.appendChild(wrap);
 section.appendChild(alertWrap);
 
 
@@ -859,6 +905,10 @@ function toggleSounds() {}
 function saveGame() {}
 
 function loadGame() {}
+
+function closeModal() {
+  wrap.classList.add("hid");
+}
 
 function closeAlert() {
   alertWrap.classList.add("hid");
