@@ -9,6 +9,16 @@ let interval;
 
 let isLight = true;
 
+let minutsWin = 0;
+let secondsWin = 0;
+let timeRemain = 0;
+
+let records = [];
+
+if (!localStorage.hasOwnProperty("MariyaShusharinaNonograms")) {
+  localStorage.setItem("MariyaShusharinaNonograms", JSON.stringify(records));
+}
+
 /* Levels */
 
 let levels = [];
@@ -812,8 +822,13 @@ function timer() {
     let currentTime = Date.now();
     let time = Math.floor((currentTime - startTime) / 1000);
 
+    timeRemain = time;
+
     seconds = Math.floor(time % 60);
     mins = Math.floor(time / 60);
+
+    secondsWin = seconds;
+    minutsWin = mins;
 
     if (seconds < 10) { seconds = `0${seconds}`; }
 
