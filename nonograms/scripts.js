@@ -362,9 +362,15 @@ solveButton.classList.add("solve-btn");
 solveButton.classList.add("hid");
 solveButton.addEventListener("click", solveGame);
 
+let recordsButton = document.createElement("button");
+recordsButton.textContent = "Records";
+recordsButton.classList.add("records-btn");
+recordsButton.addEventListener("click", showRecords);
+
 menu.appendChild(randButton);
 menu.appendChild(restartButton);
 menu.appendChild(solveButton);
+menu.appendChild(recordsButton);
 
 // Settings
 
