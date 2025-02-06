@@ -754,26 +754,13 @@ function endGame() {
 }
 
 function randomGame() {
-  clearInterval(interval);
-
-  sec.textContent = 0;
-  min.textContent = 0;
-
   j = Math.floor(Math.random() * 15);
 
   mode = levels[j].difficulty;
-
-  nonogramDiv.textContent = "";
-
-  easyGames.classList.add("hid");
-  medGames.classList.add("hid");
-  hardGames.classList.add("hid");
-
+  
   h2.textContent = levels[j].name;
 
-  showNonogram();
-  
-  selectGrid();
+  restartGame();
 }
 
 function toggleTheme() {
