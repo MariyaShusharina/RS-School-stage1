@@ -343,8 +343,31 @@ restartButton.classList.add("restart-btn");
 restartButton.classList.add("hid");
 restartButton.addEventListener("click", restartGame);
 
+let solveButton = document.createElement("button");
+solveButton.textContent = "Solution";
+solveButton.classList.add("solve-btn");
+solveButton.classList.add("hid");
+solveButton.addEventListener("click", solveGame);
+
 menu.appendChild(randButton);
 menu.appendChild(restartButton);
+menu.appendChild(solveButton);
+
+// Settings
+
+let settings = document.createElement("div");
+settings.classList.add("settings");
+//theme;
+let themeButton = document.createElement("button");
+themeButton.textContent = "\uD83C\uDF1E";
+themeButton.classList.add("theme-btn");
+themeButton.addEventListener("click", toggleTheme);
+//sound;
+//save;
+//loadsaved;
+
+settings.appendChild(themeButton);
+
 
 // Difficulty menu
 
@@ -445,6 +468,7 @@ nonogramDiv.classList.add("nonogram-div");
 // Fill the Section with content
 
 section.appendChild(menu);
+section.appendChild(settings);
 section.appendChild(diff);
 section.appendChild(easyGames);
 section.appendChild(medGames);
@@ -529,7 +553,7 @@ function medMode() {
   if (easy.classList.contains("active-diff")) {
     easy.classList.remove("active-diff");
   }
-  
+
   const hard = document.querySelector(".hard-diff");
   if (hard.classList.contains("active-diff")) {
     hard.classList.remove("active-diff");
